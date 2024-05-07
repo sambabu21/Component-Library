@@ -1,3 +1,4 @@
+import BadgesSection from "./Components/Badges/Index";
 import ButtonSection from "./Components/Button/Index";
 import Header from "./Components/Header";
 import MenuSection from "./Components/Menu/Index";
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <ButtonSection />
       <MenuSection />
+      <BadgesSection />
     </div>
   )
 }

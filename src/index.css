@@ -60,3 +60,48 @@ button{
 .item:not(:last-child) {
   border-bottom: 1px solid #6B7280;
 }
+
+.badge{
+  padding: 7px 20px;
+  background-color: #F3F4F6;
+  color: black;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.badge-red{
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+.badge-yellow{
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+.badge-green{
+  background-color: #D1FAE5;
+  color: #065F46;
+}
+.badge-blue{
+  background-color: #DBEAFE;
+  color: #1E40AF;
+}
+.badge-indigo{
+  background-color: #E0E7FF;
+  color: #3730A3;
+}
+.badge-purple{
+  background-color: #EDE9FE;
+  color: #5B21B6;
+}
+.badge-pink{
+  background-color: #FCE7F3;
+  color: #9D174D;
+}
+
+.badge-square{
+  border-radius: 4px;
+}
+
+.badge-pill{
+  border-radius: 25px;
+}
