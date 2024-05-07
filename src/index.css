@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Jost, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #F3F4F6;
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button{
+  background-color: aliceblue;
+  color: #242424;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.btn-sm{
+  padding: 5px 8px;
+}
+.btn-lg{
+  padding: 15px 20px;
+}
+
+.btn-success{
+  background-color:#D1FAE5;
+  color:#065F46;
+  border:1px solid #065F46;
+}
+.btn-success:hover{
+  background-color:#b1f7d3;
+}
+
+.btn-warning{
+  background-color:#FEF3C7;
+  color:#92400E;
+  border:1px solid #92400E;
+}
+.btn-warning:hover{
+  background-color:#fae9a7;
+}
+
+.btn-error{
+  background-color:#FEE2E2;
+  color:#991B1B;
+  border:1px solid #991B1B;
+}
+.btn-error:hover{
+  background-color:#f7bdbd;
+}
+
+.item:not(:last-child) {
+  border-bottom: 1px solid #6B7280;
+}
