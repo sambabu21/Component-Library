@@ -8,8 +8,19 @@ export default function MenuSection(){
         <div className="py-20 flex flex-col gap-5 border-b">
             <h1 className="text-3xl font-bold">Menu</h1>
             <h2 className="text-xl mt-5 font-semibold">Preview:</h2>
-            <div className="h-52 flex justify-around ">
-                <Menu onOpen={() => console.log("Opened/closed")}>
+            <div className="flex flex-col md:flex-row justify-around items-center gap-2">
+                <div className="flex flex-col justify-around items-center gap-2"> 
+                    <Menu onOpen={() => console.log("Opened/closed")}>
+                        <MenuButton>Menu</MenuButton>
+                        <MenuDropdown>
+                        <MenuItem>Home</MenuItem>
+                        <MenuItem>About</MenuItem>
+                        <MenuItem>Contact</MenuItem>
+                        <MenuItem>Blog</MenuItem>
+                        </MenuDropdown>
+                    </Menu>
+                    <h2 className="text-xl mt-5 font-semibold mt-52">Code:</h2>
+                    <h1 className="bg-[#353535] p-2 rounded-md">{`<Menu onOpen={() => console.log("Opened/closed")}>
                     <MenuButton>Menu</MenuButton>
                     <MenuDropdown>
                     <MenuItem>Home</MenuItem>
@@ -17,8 +28,20 @@ export default function MenuSection(){
                     <MenuItem>Contact</MenuItem>
                     <MenuItem>Blog</MenuItem>
                     </MenuDropdown>
-                </Menu>
-                <Menu onOpen={() => console.log("Opened/closed")}>
+                </Menu>`}</h1>
+                </div>
+                <div className="flex flex-col justify-around items-center gap-2"> 
+                    <Menu onOpen={() => console.log("Opened/closed")}>
+                        <MenuButton>Sports</MenuButton>
+                        <MenuDropdown>
+                        <MenuItem>Football</MenuItem>
+                        <MenuItem>Cricket</MenuItem>
+                        <MenuItem>Basketball</MenuItem>
+                        <MenuItem>Boxing</MenuItem>
+                        </MenuDropdown>
+                    </Menu>
+                    <h2 className="text-xl mt-5 font-semibold mt-52">Code:</h2>
+                    <h1 className="bg-[#353535] p-2 rounded-md">{`<Menu onOpen={() => console.log("Opened/closed")}>
                     <MenuButton>Sports</MenuButton>
                     <MenuDropdown>
                     <MenuItem>Football</MenuItem>
@@ -26,9 +49,11 @@ export default function MenuSection(){
                     <MenuItem>Basketball</MenuItem>
                     <MenuItem>Boxing</MenuItem>
                     </MenuDropdown>
-                </Menu>
+                </Menu>`}</h1>
+                </div>
+                
             </div>
-            <h2 className="text-xl mt-5 font-semibold">Code:</h2>
+            {/* <h2 className="text-xl mt-5 font-semibold">Code:</h2>
             <div className="flex justify-around items-center gap-2">
                 <h1 className="bg-[#353535] p-2 rounded-md">{`<Menu onOpen={() => console.log("Opened/closed")}>
                     <MenuButton>Menu</MenuButton>
@@ -48,7 +73,7 @@ export default function MenuSection(){
                     <MenuItem>Boxing</MenuItem>
                     </MenuDropdown>
                 </Menu>`}</h1>
-            </div>
+            </div> */}
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
             <div className="flex flex-col gap-3">
                 <p className="text-lg">onOpen: any function that needs to be run when the menu gets opened can be passed through this prop. </p>
