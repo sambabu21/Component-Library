@@ -21,9 +21,6 @@ export default function ButtonSection(){
                     <h2 className="text-xl mt-5 font-semibold">Code:</h2>
                     <h1 className="bg-[#353535] p-2 rounded-md">{`<Button size="lg" variant="error">Click Here</Button>`}</h1>
                 </div>
-                
-                
-                
             </div>
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
             <div className="flex flex-col gap-3">

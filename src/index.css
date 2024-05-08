@@ -122,3 +122,41 @@ button{
   background-color: #DBEAFE;
   color: #1E40AF;
 }
+
+.toast-success{
+  background-color:#D1FAE5;
+  color:#065F46;
+}
+.toast-warning{
+  background-color: #FFFBEB;
+  color: #92400E;
+}
+.toast-error{
+  background-color: #FEE2E2;
+  color: #991b1b;
+}
+.toast-neutral{
+  background-color: #DBEAFE;
+  color: #1E40AF;
+}
+
+.toast-lower-right{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+.toast-upper-right{
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+.toast-lower-left{
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+.toast-upper-left{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}

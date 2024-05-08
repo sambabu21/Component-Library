@@ -4,6 +4,7 @@ import ButtonSection from "./Components/Button/Index";
 import CardSection from "./Components/Cards/Index";
 import Header from "./Components/Header";
 import MenuSection from "./Components/Menu/Index";
+import ToastSection from "./Components/Toast";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <BadgesSection />
       <BannerSection />
       <CardSection />
+      <ToastSection />
     </div>
   )
 }
