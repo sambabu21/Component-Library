@@ -25,12 +25,6 @@ export default function ButtonSection(){
                 
                 
             </div>
-            <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-            {/* <div className="flex justify-around items-center gap-2">
-                <h1 className="bg-[#353535] p-2 rounded-md">{`<Button size="sm" variant="success">Click Here</Button>`}</h1>
-                <h1 className="bg-[#353535] p-2 rounded-md">{`<Button size="md" variant="warning">Click Here</Button>`}</h1>
-                <h1 className="bg-[#353535] p-2 rounded-md">{`<Button size="lg" variant="error">Click Here</Button>`}</h1>
-            </div> */}
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
             <div className="flex flex-col gap-3">
                 <p className="text-lg">Size: Determines the size of the button(default medium). eg:sm,lg </p>
