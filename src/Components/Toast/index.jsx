@@ -34,7 +34,7 @@ export default function ToastSection(){
                         {clickedElement.e1 && <Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>}
                     </div>
                     <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] p-2 rounded-md">{`<Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>`}</h1>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>`}</h1>
                 </div>
                 <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
                     <div>
@@ -42,7 +42,7 @@ export default function ToastSection(){
                         {clickedElement.e2 &&<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>}
                     </div>
                     <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] p-2 rounded-md">{`<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>`}</h1>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>`}</h1>
                 </div>
                 <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
                     <div>
@@ -50,7 +50,7 @@ export default function ToastSection(){
                         {clickedElement.e3 && <Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>}
                     </div>
                     <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] p-2 rounded-md">{`<Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>`}</h1>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>`}</h1>
                 </div>
                 <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
                     <div>
@@ -58,7 +58,7 @@ export default function ToastSection(){
                         {clickedElement.e4 && <Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>}
                     </div>
                     <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] p-2 rounded-md">{`<Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>`}</h1>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>`}</h1>
                 </div>
             </div>
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
