@@ -71,7 +71,7 @@ button{
 
 .badge-red{
   background-color: #FEE2E2;
-  color: #991B1B;
+  color: #991b1b;
 }
 .badge-yellow{
   background-color: #FEF3C7;
@@ -104,4 +104,21 @@ button{
 
 .badge-pill{
   border-radius: 25px;
+}
+
+.banner-success{
+  background-color: #D1FAE5;
+  color: #065F46;
+}
+.banner-warning{
+  background-color: #FFFBEB;
+  color: #92400E;
+}
+.banner-error{
+  background-color: #FEE2E2;
+  color: #991b1b;
+}
+.banner-neutral{
+  background-color: #DBEAFE;
+  color: #1E40AF;
 }
