@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  box-sizing: border-box;
+}
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-  color: #F3F4F6;
-  background-color: #242424;
+  color: #242424;
+  background-color: #fafafc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.jost{
+  font-family: Jost;
 }
 
 button{
@@ -157,6 +163,7 @@ button{
   top: 50px;
   left: 50px;
 }
+
 
 .tool{
   background-color: white;

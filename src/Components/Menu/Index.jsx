@@ -5,10 +5,10 @@ import MenuItem from "./MenuItem";
 
 export default function MenuSection() {
   return (
-    <div className="py-20 flex flex-col gap-5 border-b">
+    <div className="py-20 flex flex-col gap-5 border-b w-full sm:w-[80%] mx-auto px-2 sm:px-0">
       <h1 className="text-3xl font-bold">Menu</h1>
       <h2 className="text-xl mt-5 font-semibold">Preview:</h2>
-      <div className="flex flex-col md:flex-row justify-around items-center gap-2">
+      <div className="flex flex-col md:flex-row justify-around items-center gap-5 sm:gap-2 bg-[#5423e7] p-5 rounded-md">
         <div className="flex flex-col justify-around items-center gap-2">
           <Menu onOpen={() => console.log("Opened/closed")}>
             <MenuButton>Menu</MenuButton>
@@ -19,8 +19,8 @@ export default function MenuSection() {
               <MenuItem>Blog</MenuItem>
             </MenuDropdown>
           </Menu>
-          <h2 className="text-xl mt-5 font-semibold mt-52">Code:</h2>
-          <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Menu onOpen={() => console.log("Opened/closed")}>
+          <h2 className="text-xl  font-semibold mt-52 text-white">Code:</h2>
+          <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Menu onOpen={() => console.log("Opened/closed")}>
                     <MenuButton>Menu</MenuButton>
                     <MenuDropdown>
                     <MenuItem>Home</MenuItem>
@@ -40,8 +40,8 @@ export default function MenuSection() {
               <MenuItem>Boxing</MenuItem>
             </MenuDropdown>
           </Menu>
-          <h2 className="text-xl mt-5 font-semibold mt-52">Code:</h2>
-          <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Menu onOpen={() => console.log("Opened/closed")}>
+          <h2 className="text-xl font-semibold mt-52 text-white">Code:</h2>
+          <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Menu onOpen={() => console.log("Opened/closed")}>
                     <MenuButton>Sports</MenuButton>
                     <MenuDropdown>
                     <MenuItem>Football</MenuItem>

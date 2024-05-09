@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <div className=" h-32 border-b flex justify-center items-center">
-      <h1 className="font-bold text-4xl">React Component Library</h1>
+    <div className=" h-32 border-b border-[#ffffff4f]  flex justify-center items-center bg-[#5423e7]">
+      <h1 className="font-bold text-center text-2xl sm:text-4xl text-[white] jost">React Component Library</h1>
     </div>
   );
 }

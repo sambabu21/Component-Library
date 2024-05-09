@@ -25,7 +25,7 @@ export default function TooltipPopup({ children }) {
 
   const allClasses = classnames(
     styleClass,
-    "w-[380px]  flex rounded-[8px] absolute bottom-[90px] tool px-5 p-3 justify-between items-center gap-2 drop-shadow-xl"
+    "w-[300px] sm:w-[380px]  flex rounded-[8px] absolute bottom-[90px] -left-[100px] sm:left-0 tool px-5 p-3 justify-between items-center gap-2 drop-shadow-xl"
   );
 
   if (style === "bold") {
@@ -69,7 +69,7 @@ export default function TooltipPopup({ children }) {
             <span
               className={classnames(
                 styleClass,
-                "w-5 h-5 -z-10 absolute -bottom-6 left-5 rotate-45"
+                "w-5 h-5 -z-10 absolute -bottom-5 sm:left-5 rotate-45"
               )}
             ></span>
           </div>
