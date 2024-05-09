@@ -10,14 +10,19 @@ export default function Toast({
   children,
   className,
   clicked,
-  position="lower-right",
+  position = "lower-right",
   title,
-  variant="success",
+  variant = "success",
   ...rest
 }) {
   let variantClass = variant && `toast-${variant}`;
-  let positionClass = position && `toast-${position}`
-  const allClasses = classnames(variantClass, positionClass, className,"w-[380px] rounded-[6px] p-5 flex gap-2 justify-start items-start drop-shadow-xl");
+  let positionClass = position && `toast-${position}`;
+  const allClasses = classnames(
+    variantClass,
+    positionClass,
+    className,
+    "w-[380px] rounded-[6px] p-5 flex gap-2 justify-start items-start drop-shadow-xl"
+  );
 
   let imgSrc = successImg;
   if (variant === "success") {

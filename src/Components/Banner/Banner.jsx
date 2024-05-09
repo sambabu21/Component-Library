@@ -15,7 +15,7 @@ export default function Banner({
   const allClasses = classnames(
     typeClass,
     className,
-    "w-[896px] rounded-[6px] p-5 flex gap-2 justify-start items-start"
+    "sm:w-[896px] rounded-[6px] p-5 flex gap-2 justify-start items-start"
   );
 
   let imgSrc = successImg;

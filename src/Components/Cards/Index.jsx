@@ -21,9 +21,9 @@ export default function CardSection(){
             </div>
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
             <div className="flex flex-col gap-3">
-                <p className="text-lg">Title: Sets the title text of the card. </p>
-                <p className="text-lg">iconUrl: Sets the icon of the card to the image specified by the url. </p>
-                <p className="text-lg">bgColor: Sets the background color for icons with transparent backgrounds. </p>
+                <p className="text-md">Title: Sets the title text of the card. </p>
+                <p className="text-md">iconUrl: Sets the icon of the card to the image specified by the url. </p>
+                <p className="text-md">bgColor: Sets the background color for icons with transparent backgrounds. </p>
             </div>
         </div>
     )

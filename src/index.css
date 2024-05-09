@@ -4,7 +4,6 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   color-scheme: light dark;
   color: #F3F4F6;
   background-color: #242424;
@@ -195,4 +194,18 @@ button{
 .tool-black-light{
   background-color: white;
   color: #111827;
+}
+
+.test-img{
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%,-50%);
+  left: 40px;
+}
+
+@media(max-width:639px){
+  .smaller-img{
+    background-position-y: -25px;
+  }
 }
