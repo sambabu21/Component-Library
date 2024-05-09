@@ -23,16 +23,16 @@ export default function BadgesSection() {
       </div>
       <h2 className="text-xl mt-5 font-semibold">Props:</h2>
       <div className="flex flex-col gap-5">
-        <p className="text-lg flex gap-2 justify-start items-center">
+        <p className="text-md flex gap-2 justify-start items-center">
           Shape:
-          <div className="flex gap-3">
+          <div className="flex gap-3 ">
             <Badge shape="sqaure">Square</Badge>
             <Badge shape="pill">Pill</Badge>
           </div>
         </p>
-        <p className="text-lg flex gap-2 justify-start items-center">
+        <p className="text-md flex gap-2 justify-start items-center">
           Color:
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
             <Badge color="red">Red</Badge>
             <Badge shape="yellow">Yellow</Badge>
             <Badge shape="grenn">Green</Badge>

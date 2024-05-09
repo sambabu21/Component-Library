@@ -195,3 +195,17 @@ button{
   background-color: white;
   color: #111827;
 }
+
+.test-img{
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%,-50%);
+  left: 40px;
+}
+
+@media(max-width:639px){
+  .smaller-img{
+    background-position-y: -25px;
+  }
+}

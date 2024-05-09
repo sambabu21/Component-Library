@@ -30,10 +30,10 @@ export default function ButtonSection() {
       </div>
       <h2 className="text-xl mt-5 font-semibold">Props:</h2>
       <div className="flex flex-col gap-3">
-        <p className="text-lg">
+        <p className="text-md">
           Size: Determines the size of the button(default medium). eg:sm,lg{" "}
         </p>
-        <p className="text-lg">
+        <p className="text-md">
           Variant: Changes the background and text color depending on the nature
           of the button. eg:success,warning,error{" "}
         </p>

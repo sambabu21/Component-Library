@@ -63,10 +63,10 @@ export default function ToastSection(){
             </div>
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
             <div className="flex flex-col gap-3">
-                <p className="text-lg">Variant: Determines the type of toast message displayed. Eg:success, warning, error, neutral </p>
-                <p className="text-lg">Title: Title of the toast message </p>
-                <p className="text-lg">Position: Position of the toast message. Eg:upper-right,upper-left,lower-right,lower-left </p>
-                <p className="text-lg">Description: Decription message of the toast passed as children. </p>
+                <p className="text-md">Variant: Determines the type of toast message displayed. Eg:success, warning, error, neutral </p>
+                <p className="text-md">Title: Title of the toast message </p>
+                <p className="text-md">Position: Position of the toast message. Eg:upper-right,upper-left,lower-right,lower-left </p>
+                <p className="text-md">Description: Decription message of the toast passed as children. </p>
 
             </div>
         </div>
