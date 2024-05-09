@@ -24,41 +24,41 @@ export default function ToastSection(){
     
     
     return (
-        <div className="py-20 flex flex-col gap-5 border-b">
+        <div className="py-20 flex flex-col gap-5 border-b w-full sm:w-[80%] mx-auto px-2 sm:px-0">
             <h1 className="text-3xl font-bold">Toasts</h1>
             <h2 className="text-xl mt-5 font-semibold">Preview:</h2>
-            <div className="flex flex-col md:flex-row  justify-around items-center gap-2">
+            <div className="flex flex-col md:flex-row  justify-around items-center gap-2 bg-[#5423e7] p-5 rounded-md">
                 <div className=" flex flex-col justify-around items-center gap-2 h-52 "> 
                     <div>
                         <Button onClick={handleClick} name="e1">Click here</Button>
                         {clickedElement.e1 && <Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>}
                     </div>
-                    <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>`}</h1>
+                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>`}</h1>
                 </div>
                 <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
                     <div>
                         <Button onClick={handleClick} name="e2">Click here</Button>
                         {clickedElement.e2 &&<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>}
                     </div>
-                    <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>`}</h1>
+                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>`}</h1>
                 </div>
                 <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
                     <div>
                         <Button onClick={handleClick} name="e3">Click here</Button>
                         {clickedElement.e3 && <Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>}
                     </div>
-                    <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>`}</h1>
+                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>`}</h1>
                 </div>
                 <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
                     <div>
                         <Button onClick={handleClick} name="e4">Click here</Button>
                         {clickedElement.e4 && <Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>}
                     </div>
-                    <h2 className="text-xl mt-5 font-semibold">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md">{`<Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>`}</h1>
+                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
+                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>`}</h1>
                 </div>
             </div>
             <h2 className="text-xl mt-5 font-semibold">Props:</h2>
