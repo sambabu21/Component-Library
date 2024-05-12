@@ -1,48 +1,44 @@
+import { useEffect } from "react";
 import Badge from "./Badge";
+import { GoDotFill } from "react-icons/go";
+import { FaXmark } from "react-icons/fa6";
 
 export default function BadgesSection() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+},[])
   return (
-    <div className="py-20 flex flex-col gap-5 border-b w-full sm:w-[80%] mx-auto px-2 sm:px-0 ">
-      <h1 className="text-3xl font-bold">Badges</h1>
-      <h2 className="text-xl mt-5 font-semibold">Preview:</h2>
-      <div className="flex flex-col sm:flex-row justify-around items-center bg-[#5423e7] gap-5 sm:gap-2 p-5 rounded-md">
-        <div className=" flex flex-col justify-around items-center gap-2 h-52 ">
-          <Badge shape="sqaure" color="red">
-            Badge 1
-          </Badge>
-          <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-          <h1 className="bg-[#353535] text-[14px] p-4 rounded-md text-white">{`<Badge shape="sqaure" color="red">Badge 1</Badge>`}</h1>
+    <div className="bg-[#111927] flex justify-center items-center">
+      <div className="min-h-screen w-full sm:w-[80vw] flex flex-col items-start p-20 gap-10">
+        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">Badges</h1>
+        <h2 className="text-[#B4B4B4] -mt-5">Badges provide additional contextual information for other user interface (UI) elements on the page. They enable you to easily show statuses, notifications, and short messages in your app.</h2>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">Square shape badges</h3>
+        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+            <Badge size="small">Label</Badge>
+            <Badge>Label</Badge>
+            <Badge size="large">Label</Badge>
         </div>
-        <div className=" flex flex-col justify-around items-center gap-2 h-52">
-          <Badge shape="pill" color="blue">
-            Badge 2
-          </Badge>
-          <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-          <h1 className="bg-[#353535] p-4 text-[14px] rounded-md text-white">{`<Badge shape="pill" color="blue">Badge 2</Badge>`}</h1>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">Pill shape badges</h3>
+        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+            <Badge size="small" shape="pill">Label</Badge>
+            <Badge shape="pill">Label</Badge>
+            <Badge size="large" shape="pill">Label</Badge>
+        </div>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">Coloured badges</h3>
+        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+            <Badge color="red">Label</Badge>
+            <Badge color="blue">Label</Badge>
+            <Badge color="yellow">Label</Badge>
+            <Badge color="green">Label</Badge>
+        </div>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">Badges with icons</h3>
+        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+            <Badge startIcon={<GoDotFill />} >Label</Badge>
+            <Badge stopIcon={<FaXmark />} >Label</Badge>
+            <Badge startIcon={<GoDotFill />} stopIcon={<FaXmark />}>Label</Badge>
         </div>
       </div>
-      <h2 className="text-xl mt-5 font-semibold">Props:</h2>
-      <div className="flex flex-col gap-5">
-        <p className="text-md flex gap-2 justify-start items-center">
-          Shape:
-          <div className="flex gap-3 ">
-            <Badge shape="sqaure">Square</Badge>
-            <Badge shape="pill">Pill</Badge>
-          </div>
-        </p>
-        <p className="text-md flex gap-2 justify-start items-center">
-          Color:
-          <div className="flex flex-wrap gap-3">
-            <Badge color="red">Red</Badge>
-            <Badge shape="yellow">Yellow</Badge>
-            <Badge shape="grenn">Green</Badge>
-            <Badge shape="blue">Blue</Badge>
-            <Badge shape="indigo">Indigo</Badge>
-            <Badge shape="purple">Purple</Badge>
-            <Badge shape="pink">Pink</Badge>
-          </div>
-        </p>
-      </div>
+
     </div>
   );
 }

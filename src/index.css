@@ -16,21 +16,52 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.glass{
+  background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+}
+
 .jost{
   font-family: Jost;
+}
+
+.gradient-text{
+  background-image: linear-gradient(to bottom right, #22c1c3, #fdbb2d);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.avatar{
+  width: 70px;
+  height: 70px;
+}
+
+.av-small{
+  width: 50px;
+  height: 50px;
+}
+.av-large{
+  width: 90px;
+  height: 90px;
 }
 
 button{
   background-color: aliceblue;
   color: #242424;
-  padding: 10px 15px;
+  font-weight: 600;
+  padding: 10px 25px;
   border-radius: 5px;
 }
-.btn-sm{
-  padding: 5px 8px;
+.btn-small{
+  padding: 5px 10px;
 }
-.btn-lg{
-  padding: 15px 20px;
+.btn-large{
+  padding: 15px 40px;
 }
 
 .btn-success{
@@ -65,40 +96,54 @@ button{
 }
 
 .badge{
-  padding: 7px 20px;
-  background-color: #F3F4F6;
-  color: black;
+  padding: 2px 8px;
+  color: #EEEEEE;
   border-radius: 4px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 14px;
+  border:2px solid #606060;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3px;
+}
+
+.badge-small{
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+.badge-large{
+  padding: 4px 12px;
 }
 
 .badge-red{
-  background-color: #FEE2E2;
-  color: #991b1b;
+  border: 1px solid #D92D20;
+  color: #D92D20;
 }
 .badge-yellow{
-  background-color: #FEF3C7;
-  color: #92400E;
+  border: 1px solid #DC6803;
+  color: #DC6803;
 }
 .badge-green{
-  background-color: #D1FAE5;
-  color: #065F46;
+  border: 1px solid #079455;
+  color: #079455;
 }
 .badge-blue{
-  background-color: #DBEAFE;
-  color: #1E40AF;
+  border: 1px solid #1570EF;
+  color: #1570EF;
 }
 .badge-indigo{
-  background-color: #E0E7FF;
-  color: #3730A3;
+  border: 1px solid #444CE7;
+  color: #444CE7;
 }
 .badge-purple{
-  background-color: #EDE9FE;
-  color: #5B21B6;
+  border: 1px solid #6938EF;
+  color: #6938EF;
 }
 .badge-pink{
-  background-color: #FCE7F3;
-  color: #9D174D;
+  border: 1px solid #DD2590;
+  color: #DD2590;
 }
 
 .badge-square{
@@ -122,8 +167,8 @@ button{
   color: #991b1b;
 }
 .banner-neutral{
-  background-color: #DBEAFE;
-  color: #1E40AF;
+  background-color: #22c0c325;
+  color: #22c1c3;
 }
 
 .toast-success{
@@ -139,8 +184,8 @@ button{
   color: #991b1b;
 }
 .toast-neutral{
-  background-color: #DBEAFE;
-  color: #1E40AF;
+  background-color: #22c0c325;
+  color: #22c1c3;
 }
 
 .toast-lower-right{
