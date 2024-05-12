@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import neutralPng from "../Assets/neutral.png";
 import Badge from "../Components/Badges/Badge";
-import Banner from "../Components/Banner/Banner";
+import Banner from "../Components/Alerts/Alert";
 import Button from "../Components/Button/Button";
 import ComponentContainer from "./ComponentContainer";
 
@@ -25,18 +25,16 @@ export default function Components() {
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             <ComponentContainer title="Avatar">
-    
-                <div className="w-[60px] h-[60px] border border-[#FFFF57] rounded-full flex justify-center items-center">
-                    <div className="w-[30px] h-[30px] rounded-full bg-[#FFFF57]"></div>
-                </div>
-          
+              <div className="w-[60px] h-[60px] border border-[#FFFF57] rounded-full flex justify-center items-center">
+                <div className="w-[30px] h-[30px] rounded-full bg-[#FFFF57]"></div>
+              </div>
             </ComponentContainer>
             <ComponentContainer title="Badges">
               <div className="w-[100px] h-[40px]  flex justify-center items-center border rounded-[10px] border-[#FFFF57]">
                 <div className="w-[60px] h-[10px] bg-[#FFFF57]"></div>
               </div>
             </ComponentContainer>
-            <ComponentContainer title="Banners">
+            <ComponentContainer title="Alerts">
               <div className="w-[200px] h-[80px] rounded-[10px] border border-[#FFFF57]  flex justify-start p-5 items-start gap-3">
                 <div className="w-4 h-4 bg-[#FFFF57] rounded-full"></div>
                 <div className="flex flex-col justify-start gap-2">

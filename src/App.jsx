@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BadgesSection from "./Components/Badges/Index";
-import BannerSection from "./Components/Banner/Index";
+import BannerSection from "./Components/Alerts/Index";
 import ButtonSection from "./Components/Button/Index";
 import CardSection from "./Components/Cards/Index";
 import Footer from "./Components/Footer";
@@ -13,6 +13,7 @@ import MainLayout from "./Layout/MainLayout";
 import Components from "./ComponentPage/Components";
 import AvatarSection from "./Components/Avatar/Index";
 import ComponentDetailLayout from "./Layout/ComponentDetailLayout";
+import AlertSection from "./Components/Alerts/Index";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/components" element={<Components />}/>
                 <Route path="/components/avatars" element={<AvatarSection />}/>
                 <Route path="/components/badges" element={<BadgesSection />}/>
+                <Route path="/components/alerts" element={<AlertSection />}/>
             </Route>
         </Route>
       </Routes>
