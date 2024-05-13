@@ -18,7 +18,7 @@ export default function Alert({
   const allClasses = classnames(
     typeClass,
     className,
-    "sm:max-w-[896px] rounded-[12px] p-4 flex gap-4 justify-start items-start alert"
+    "sm:max-w-[90%] rounded-[12px] p-4 flex gap-4 justify-start items-start alert"
   );
 
   let icon = <PiWarningCircleBold className="w-4 h-4"/>;

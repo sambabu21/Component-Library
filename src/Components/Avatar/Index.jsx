@@ -7,8 +7,8 @@ export default function AvatarSection() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="bg-[#111927] flex justify-center items-center">
-      <div className="w-full sm:w-[80vw] flex flex-col items-start p-20 gap-10">
+    <div className="flex justify-center items-center">
+      <div className="w-[90vw] md:w-[70vw] flex flex-col items-start p-20 gap-10">
         <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
           Avatar
         </h1>
@@ -18,7 +18,7 @@ export default function AvatarSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Default avatar
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Avatar size="small" />
           <Avatar />
           <Avatar size="large" />
@@ -27,7 +27,7 @@ export default function AvatarSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Avatars with intials
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Avatar size="small">SB</Avatar>
           <Avatar>SB</Avatar>
           <Avatar size="large">SB</Avatar>
@@ -36,7 +36,7 @@ export default function AvatarSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Avatars with image
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Avatar src={proPic} size="small" />
           <Avatar src={proPic} />
           <Avatar src={proPic} size="large" />

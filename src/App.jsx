@@ -26,6 +26,7 @@ function App() {
                 <Route path="/components/avatars" element={<AvatarSection />}/>
                 <Route path="/components/badges" element={<BadgesSection />}/>
                 <Route path="/components/alerts" element={<AlertSection />}/>
+                <Route path="/components/buttons" element={<ButtonSection />}/>
             </Route>
         </Route>
       </Routes>

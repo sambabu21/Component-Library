@@ -8,8 +8,8 @@ export default function BadgesSection() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="bg-[#111927] flex justify-center items-center">
-      <div className="min-h-screen w-full sm:w-[80vw] flex flex-col items-start p-20 gap-10">
+    <div className="flex justify-center items-center">
+      <div className="min-h-screen w-[90vw] md:w-[70vw]  flex flex-col items-start p-20 gap-10">
         <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
           Badges
         </h1>
@@ -21,7 +21,7 @@ export default function BadgesSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Square shape badges
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Badge size="small">Label</Badge>
           <Badge>Label</Badge>
           <Badge size="large">Label</Badge>
@@ -29,7 +29,7 @@ export default function BadgesSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Pill shape badges
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Badge size="small" shape="pill">
             Label
           </Badge>
@@ -41,7 +41,7 @@ export default function BadgesSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Coloured badges
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Badge color="red">Label</Badge>
           <Badge color="blue">Label</Badge>
           <Badge color="yellow">Label</Badge>
@@ -50,7 +50,7 @@ export default function BadgesSection() {
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
           Badges with icons
         </h3>
-        <div className="w-full h-[250px] glass flex justify-center items-center gap-20">
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
           <Badge startIcon={<GoDotFill />}>Label</Badge>
           <Badge stopIcon={<FaXmark />}>Label</Badge>
           <Badge startIcon={<GoDotFill />} stopIcon={<FaXmark />}>

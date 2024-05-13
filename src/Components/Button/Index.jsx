@@ -2,44 +2,88 @@ import Button from "./Button";
 
 export default function ButtonSection() {
   return (
-    
-    <div className="py-20 flex flex-col gap-5 border-b w-full sm:w-[80%] mx-auto px-2 sm:px-0">
-      <h1 className="text-3xl font-bold">Buttons</h1>
-      <h2 className="text-xl mt-5 font-semibold">Preview:</h2>
-      <div className="flex flex-col md:flex-row justify-around items-center gap-5 sm:gap-2 bg-[#5423e7] p-5 rounded-md">
-        <div className=" flex flex-col justify-around items-center gap-2 h-52 ">
-          <Button size={"sm"} variant="success">
-            Click Here
-          </Button>
-          <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-          <h1 className="bg-[#353535] text-[14px] p-4 rounded-md text-white">{`<Button size="sm" variant="success">Click Here</Button>`}</h1>
+    <div className=" flex justify-center items-center">
+      <div className="w-[90vw] md:w-[70vw] flex flex-col items-start p-20 gap-10">
+        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
+          Buttons
+        </h1>
+        <h2 className="text-[#B4B4B4] -mt-5">
+        Buttons communicate actions that users can take. They are typically placed throughout your UI, in places like: Dialogs, Forms, Toolbars, etc.
+        </h2>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Button types
+        </h3>
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
+           <Button variant="outline">Outline</Button>
+           <Button>Filled</Button>
+           <Button variant="text">Text</Button>
         </div>
-        <div className="flex flex-col justify-around items-center gap-2 h-52 ">
-          <Button size="md" variant="warning">
-            Click Here
-          </Button>
-          <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-          <h1 className="bg-[#353535] text-[14px] p-4 rounded-md text-white">{`<Button size="md" variant="warning">Click Here</Button>`}</h1>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Default filled button
+        </h3>
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
+           <Button>Filled</Button>
+           <Button isDisabled={true}>Disabled</Button>
         </div>
-        <div className="flex flex-col justify-around items-center gap-2 h-52 ">
-          <Button size="lg" variant="error">
-            Click Here
-          </Button>
-          <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-          <h1 className="bg-[#353535] text-[14px] p-4 rounded-md text-white">{`<Button size="lg" variant="error">Click Here</Button>`}</h1>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Outlined button
+        </h3>
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
+           <Button variant="outline">Outlined</Button>
+           <Button isDisabled={true} variant="outline">Disabled</Button>
         </div>
-      </div>
-      <h2 className="text-xl mt-5 font-semibold">Props:</h2>
-      <div className="flex flex-col gap-3">
-        <p className="text-md">
-          Size: Determines the size of the button(default medium). eg:sm,lg{" "}
-        </p>
-        <p className="text-md">
-          Variant: Changes the background and text color depending on the nature
-          of the button. eg:success,warning,error{" "}
-        </p>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Text button
+        </h3>
+        <div className="w-full h-[250px] border border-[#484848] rounded-[20px] flex justify-center items-center gap-20">
+           <Button variant="text">Text</Button>
+           <Button isDisabled={true} variant="text">Disabled</Button>
+        </div>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Colored buttons
+        </h3>
+        <div className="w-full border border-[#484848] rounded-[20px] flex flex-col justify-center items-center gap-10 py-10">
+            <div className="flex justify-center items-center gap-10">
+              <Button color="red">Red</Button>
+              <Button color="blue">Blue</Button>
+              <Button color="green">Green</Button>
+              <Button color="yellow" >Yellow</Button>
+            </div>
+            <div className="flex justify-center items-center gap-10">
+              <Button variant="outline" color="red">Red</Button>
+              <Button variant="outline" color="blue">Blue</Button>
+              <Button variant="outline" color="green">Green</Button>
+              <Button variant="outline" color="yellow" >Yellow</Button>
+            </div>
+            <div className="flex justify-center items-center gap-10">
+              <Button variant="text" color="red">Red</Button>
+              <Button variant="text" color="blue">Blue</Button>
+              <Button variant="text" color="green">Green</Button>
+              <Button variant="text" color="yellow" >Yellow</Button>
+            </div>
+        </div>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Button sizes
+        </h3>
+        <div className="w-full border border-[#484848] rounded-[20px] flex flex-col justify-center items-center gap-10 py-10">
+            <div className="flex justify-center items-center gap-10">
+              <Button size="small">Small</Button>
+              <Button>Medium</Button>
+              <Button size="large">Large</Button>
+            </div>
+            <div className="flex justify-center items-center gap-10">
+              <Button variant="outline" size="small">Small</Button>
+              <Button variant="outline">Medium</Button>
+              <Button variant="outline" size="large">Large</Button>
+            </div>
+            <div className="flex justify-center items-center gap-10">
+              <Button variant="text" size="small">Small</Button>
+              <Button variant="text">Medium</Button>
+              <Button variant="text" size="large">Large</Button>
+            </div>
+        </div>
       </div>
     </div>
- 
+    
   );
 }
