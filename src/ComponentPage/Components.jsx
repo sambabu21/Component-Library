@@ -73,7 +73,7 @@ export default function Components() {
               <div className="flex flex-col justify-center items-center gap-5">
                 <div className="w-[150px] h-[50px] flex justify-center items-center rounded-[5px] border border-[#6E56CF] z-10 relative">
                   <span className="h-2 w-20 bg-[#6E56CF]"></span>
-                  <div className="w-[20px] h-[20px] rotate-45 border-b border-r bg-[#191919] border-[#6E56CF] -z-10 absolute left-1/2 -translate-x-1/2 -bottom-[10px]"></div>
+                  <div className="w-[20px] h-[20px] rotate-45 border-b border-r bg-[#111111] border-[#6E56CF] -z-10 absolute left-1/2 -translate-x-1/2 -bottom-[10px]"></div>
                 </div>
                 <span className="w-4 h-4 bg-[#7B7B7B] rounded-full"></span>
               </div>
