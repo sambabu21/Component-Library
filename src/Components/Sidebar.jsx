@@ -28,7 +28,7 @@ const activeStyle = ({ isActive }) => ({
             <NavLink to="/components/testimonials" className="w-full h-12  text-[#B4B4B4] hover:text-[#EEEEEE] flex items-center justify-start pl-3 hover:bg-[#191919]" style={activeStyle}>Testimonials</NavLink> 
         </div>
             {
-                navOpen ? <div className="min-h-screen w-[250px] flex md:hidden flex-col items-center pt-16 fixed top-20 bg-[#111111] border-r border-[#191919] z-30">
+                navOpen ? <div className="min-h-screen w-[250px] flex md:hidden flex-col items-center pt-16 absolute left-0 top-20 bg-[#111111] border-r border-[#191919] z-30">
                 <h1 className="text-[#6E56CF] font-semibold text-sm h-16 w-full flex justify-start items-center pl-3 ">GENERAL</h1>
                 <NavLink to="/components/avatars" className="w-full h-12 text-[#B4B4B4] hover:text-[#EEEEEE] flex items-center justify-start pl-3  hover:bg-[#191919]" style={activeStyle} onClick={toggleNav}>Avatars</NavLink>
                 <NavLink to="/components/badges" className="w-full h-12  text-[#B4B4B4] hover:text-[#EEEEEE] flex items-center justify-start pl-3 hover:bg-[#191919]" style={activeStyle} onClick={toggleNav}>Badges</NavLink> 
