@@ -14,29 +14,39 @@ import Components from "./ComponentPage/Components";
 import AvatarSection from "./Components/Avatar/Index";
 import ComponentDetailLayout from "./Layout/ComponentDetailLayout";
 import AlertSection from "./Components/Alerts/Index";
+import { createContext, useState } from "react";
 
+const NavContext = createContext();
+export { NavContext };
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-            <Route index element={<Home />}/>
+    <NavContext.Provider value={{navOpen,setNavOpen}}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
             <Route path="/components" element={<ComponentDetailLayout />}>
-                <Route path="/components" element={<Components />}/>
-                <Route path="/components/avatars" element={<AvatarSection />}/>
-                <Route path="/components/badges" element={<BadgesSection />}/>
-                <Route path="/components/alerts" element={<AlertSection />}/>
-                <Route path="/components/buttons" element={<ButtonSection />}/>
-                <Route path="/components/menu" element={<MenuSection />}/>
-                <Route path="/components/toasts" element={<ToastSection />}/>
-                <Route path="/components/tooltips" element={<TooltipSection />}/>
-                <Route path="/components/cards" element={<CardSection />}/>
-                <Route path="/components/testimonials" element={<TestimonialsSection />}/>
+              <Route path="/components" element={<Components />} />
+              <Route path="/components/avatars" element={<AvatarSection />} />
+              <Route path="/components/badges" element={<BadgesSection />} />
+              <Route path="/components/alerts" element={<AlertSection />} />
+              <Route path="/components/buttons" element={<ButtonSection />} />
+              <Route path="/components/menu" element={<MenuSection />} />
+              <Route path="/components/toasts" element={<ToastSection />} />
+              <Route path="/components/tooltips" element={<TooltipSection />} />
+              <Route path="/components/cards" element={<CardSection />} />
+              <Route
+                path="/components/testimonials"
+                element={<TestimonialsSection />}
+              />
             </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </NavContext.Provider>
   );
 }
 
