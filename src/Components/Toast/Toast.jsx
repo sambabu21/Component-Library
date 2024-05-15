@@ -1,18 +1,15 @@
 import classnames from "classnames";
-import successImg from "../../Assets/success.png";
-import warningImg from "../../Assets/warning.png";
-import errorImg from "../../Assets/error.png";
-import neutralImg from "../../Assets/neutral.png";
-import Button from "../Button/Button";
-import { useState } from "react";
+import { PiWarningCircleBold } from "react-icons/pi";
+import { PiCheckCircleBold } from "react-icons/pi";
+
 
 export default function Toast({
   children,
   className,
   clicked,
-  position = "lower-right",
+  position = "bottom",
   title,
-  variant = "success",
+  variant,
   ...rest
 }) {
   let variantClass = variant && `toast-${variant}`;
@@ -21,26 +18,35 @@ export default function Toast({
     variantClass,
     positionClass,
     className,
-    "w-[380px] rounded-[6px] p-5 flex gap-2 justify-start items-start drop-shadow-xl"
+    "w-[300px] rounded-[6px] px-5 py-3 flex gap-2 justify-start items-start drop-shadow-xl toast"
   );
 
-  let imgSrc = successImg;
+
+  let icon = <PiWarningCircleBold className="w-4 h-4"/>;
   if (variant === "success") {
-    imgSrc = successImg;
+    icon = <PiCheckCircleBold className="text-[#EEEEEE] w-4 h-4"/>;
+    
   } else if (variant === "warning") {
-    imgSrc = warningImg;
+    icon = <PiWarningCircleBold className="text-[#EEEEEE] w-4 h-4"/>;
+    
   } else if (variant === "error") {
-    imgSrc = errorImg;
-  } else {
-    imgSrc = neutralImg;
+    icon = <PiWarningCircleBold className="text-[#EEEEEE] w-4 h-4"/>;
+    
+  } else if(variant==="info"){
+    icon = <PiWarningCircleBold className="text-[#EEEEEE] w-4 h-4"/>;
+    
   }
+
 
   return (
     <div className={allClasses} {...rest}>
-      <img src={imgSrc} className="w-4 h-4" />
+      {/* <img src={imgSrc} className="w-4 h-4" /> */}
+      <div className="flex justify-center items-center rounded-full border-dashed border-[3px] border-opacity-55 border-[#EEEEEE] p-1">
+        {icon}
+      </div>
       <div>
-        <h1 className="font-medium capitalize">{title}</h1>
-        <p>{children}</p>
+        <h1 className="font-medium capitalize text-[14px]">{title}</h1>
+        <p className="text-[14px]">{children}</p>
       </div>
     </div>
   );

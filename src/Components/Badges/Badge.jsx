@@ -18,7 +18,7 @@ export default function Badge({
     sizeClass,
     shapeClass,
     className,
-    "badge"
+    "badge select-none"
   );
 
   return (

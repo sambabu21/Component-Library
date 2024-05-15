@@ -1,7 +1,11 @@
 import Testimonial from "./Testimonial";
 import profileImg from "../../Assets/profile.jpg"
+import { useEffect } from "react";
 
 export default function TestimonialsSection() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
     return (
       <div className="py-20 flex flex-col gap-5 border-b w-full sm:w-[80%] mx-auto px-2 sm:px-0">
         <h1 className="text-3xl font-bold">Testimonials</h1>

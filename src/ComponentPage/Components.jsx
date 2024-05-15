@@ -7,7 +7,7 @@ export default function Components() {
     }, []);
   return (
     
-      <div className="min-h-screen w-[90vw] md:w-[70vw] flex flex-col justify-center items-center py-20">
+      <div className="min-h-screen max-w-3xl flex flex-col justify-center items-center py-20">
         <h1 className="text-2xl sm:text-5xl font-bold tracking-tighter text-[#EEEEEE]">
           Component Library
         </h1>
@@ -20,7 +20,7 @@ export default function Components() {
             General
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <ComponentContainer title="Avatar">
+            <ComponentContainer title="Avatars">
               <div className="w-[60px] h-[60px] border-2 border-[#6E56CF] rounded-full flex justify-center items-center">
                 <h1 className="text-[#6E56CF]">SB</h1>
               </div>
@@ -45,7 +45,7 @@ export default function Components() {
                 <div className="w-[60px] h-[10px] bg-[#6E56CF]"></div>
               </div>
             </ComponentContainer>
-            <ComponentContainer title="Dropdown">
+            <ComponentContainer title="Menu">
               <div className="flex flex-col gap-2">
                 <div className="w-[80px] h-[20px] rounded-[3px] border border-[#7B7B7B] flex justify-center items-center">
                   <span className="w-[50px] h-[3px] bg-[#7B7B7B]"></span>

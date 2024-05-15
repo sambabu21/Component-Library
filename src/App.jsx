@@ -15,6 +15,7 @@ import AvatarSection from "./Components/Avatar/Index";
 import ComponentDetailLayout from "./Layout/ComponentDetailLayout";
 import AlertSection from "./Components/Alerts/Index";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,11 @@ function App() {
                 <Route path="/components/badges" element={<BadgesSection />}/>
                 <Route path="/components/alerts" element={<AlertSection />}/>
                 <Route path="/components/buttons" element={<ButtonSection />}/>
+                <Route path="/components/menu" element={<MenuSection />}/>
+                <Route path="/components/toasts" element={<ToastSection />}/>
+                <Route path="/components/tooltips" element={<TooltipSection />}/>
+                <Route path="/components/cards" element={<CardSection />}/>
+                <Route path="/components/testimonials" element={<TestimonialsSection />}/>
             </Route>
         </Route>
       </Routes>

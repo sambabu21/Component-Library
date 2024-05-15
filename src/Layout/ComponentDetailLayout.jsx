@@ -4,7 +4,7 @@ import Sidebar from "../Components/Sidebar";
 export default function ComponentDetailLayout() {
   return (
     <div className="flex justify-center items-center">
-      <div className="flex justify-center container mx-auto">
+      <div className="flex justify-center  mx-auto">
         <Sidebar />
         <Outlet />
       </div>

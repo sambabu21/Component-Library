@@ -1,8 +1,4 @@
 import classnames from "classnames";
-import successImg from "../../Assets/success.png";
-import warningImg from "../../Assets/warning.png";
-import errorImg from "../../Assets/error.png";
-import neutralImg from "../../Assets/neutral.png";
 import { PiWarningCircleBold } from "react-icons/pi";
 import { PiCheckCircleBold } from "react-icons/pi";
 
@@ -18,7 +14,7 @@ export default function Alert({
   const allClasses = classnames(
     typeClass,
     className,
-    "sm:max-w-[90%] rounded-[12px] p-4 flex gap-4 justify-start items-start alert"
+    "sm:max-w-[90%] rounded-[12px] p-4 flex gap-4 justify-start items-start alert select-none"
   );
 
   let icon = <PiWarningCircleBold className="w-4 h-4"/>;
@@ -30,15 +26,12 @@ export default function Alert({
   } else if (type === "warning") {
     icon = <PiWarningCircleBold className="text-[#DC6803] w-4 h-4"/>;
     color = "border-[#DC6803]"
-
   } else if (type === "error") {
     icon = <PiWarningCircleBold className="text-[#D92D20] w-4 h-4"/>;
     color = "border-[#D92D20]"
-
   } else if(type==="neutral"){
     icon = <PiWarningCircleBold className="text-[#1570EF] w-4 h-4"/>;
     color = "border-[#1570EF]"
-
   }
 
   return (

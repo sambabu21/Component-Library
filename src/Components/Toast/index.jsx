@@ -1,74 +1,151 @@
-import { useState } from "react";
-import Button from "../Button/Button";
-import Toast from "./Toast";
+import PreviewCode from "../../PreviewCode/Index";
+import ButtonAndToast from "./ButtonAndToast";
 
-export default function ToastSection(){
-    const [clickedElement, setClickedElement] = useState({e1:false,e2:false,e3:false,e4:false});
-    const handleClick = (e) => {
-        const element = e.target.name
-        setClickedElement((prevElement)=>{
-           return {
-            ...prevElement,
-            [element]:true
-        }
-        })
-        setTimeout(() => {
-            setClickedElement((prevElement)=>{
-                return {
-                 ...prevElement,
-                 [element]:false
-             }
-             })
-        }, 1500);
-      };
-    
-    
-    return (
-        <div className="py-20 flex flex-col gap-5 border-b w-full sm:w-[80%] mx-auto px-2 sm:px-0">
-            <h1 className="text-3xl font-bold">Toasts</h1>
-            <h2 className="text-xl mt-5 font-semibold">Preview:</h2>
-            <div className="flex flex-col md:flex-row  justify-around items-center gap-2 bg-[#5423e7] p-5 rounded-md">
-                <div className=" flex flex-col justify-around items-center gap-2 h-52 "> 
-                    <div>
-                        <Button onClick={handleClick} name="e1">Click here</Button>
-                        {clickedElement.e1 && <Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>}
-                    </div>
-                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="success"  variant="success" position="lower-right">Your work has been saved</Toast>`}</h1>
-                </div>
-                <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
-                    <div>
-                        <Button onClick={handleClick} name="e2">Click here</Button>
-                        {clickedElement.e2 &&<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>}
-                    </div>
-                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="Warning" variant="warning" position="lower-left">A network error was detected</Toast>`}</h1>
-                </div>
-                <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
-                    <div>
-                        <Button onClick={handleClick} name="e3">Click here</Button>
-                        {clickedElement.e3 && <Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>}
-                    </div>
-                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="error" variant="error" position="upper-right">Please re-save your work again</Toast>`}</h1>
-                </div>
-                <div className=" flex flex-col flex-wrap justify-around items-center gap-2 h-52 "> 
-                    <div>
-                        <Button onClick={handleClick} name="e4">Click here</Button>
-                        {clickedElement.e4 && <Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>}
-                    </div>
-                    <h2 className="text-xl mt-5 font-semibold text-white">Code:</h2>
-                    <h1 className="bg-[#353535] text-[14px] p-2 rounded-md text-white">{`<Toast title="Information" variant="neutral" position="upper-left">Please read updated information</Toast>`}</h1>
-                </div>
-            </div>
-            <h2 className="text-xl mt-5 font-semibold">Props:</h2>
-            <div className="flex flex-col gap-3">
-                <p className="text-md">Variant: Determines the type of toast message displayed. Eg:success, warning, error, neutral </p>
-                <p className="text-md">Title: Title of the toast message </p>
-                <p className="text-md">Position: Position of the toast message. Eg:upper-right,upper-left,lower-right,lower-left </p>
-                <p className="text-md">Description: Decription message of the toast passed as children. </p>
+export default function ToastSection() {
+  return (
+    <div className="flex justify-center items-center">
+      <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
+        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
+          Toasts
+        </h1>
+        <h2 className="text-[#B4B4B4] -mt-5">
+          Toasts display brief, temporary notifications. They're meant to be
+          noticed without disrupting a user's experience or requiring an action
+          to be taken.
+        </h2>
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Default Toast
+        </h3>
+        <PreviewCode
+          component={
+            <ButtonAndToast
+              title="Success"
+              description="Successfully updated your profile"
+            >
+              Show Toast
+            </ButtonAndToast>
+          }
+          code={`
+    <div>
+        <Toast title="Success">Successfully updated your profile</Toast>
+    </div>
+         `}
+        />
 
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Types of toasts
+        </h3>
+        <PreviewCode
+          component={
+            <div className="flex flex-wrap gap-20 px-20 justify-center items-center">
+              <ButtonAndToast
+                title="Update success"
+                description="Successfully updated your profile"
+                variant="success"
+              >
+                Show success toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Something went wrong"
+                description="Please re-save your work again"
+                variant="error"
+              >
+                Show error toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Warning"
+                description="A network error was detected"
+                variant="warning"
+              >
+                Show warning toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="New update available"
+                description="Please read updated information"
+                variant="info"
+              >
+                Show info toast
+              </ButtonAndToast>
             </div>
-        </div>
-    )
+          }
+          code={`
+    <div>
+        <Toast title="Update success" variant="success">Successfully updated your profile</Toast>
+        <Toast title="Something went wrong" variant="error">Please re-save your work again</Toast>
+        <Toast title="Warning" variant="warning">A network error was detected</Toast>
+        <Toast title="New update available" variant="info">Successfully updated your profile</Toast>
+    </div>
+         `}
+        />
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          Toast positioning
+        </h3>
+        <PreviewCode
+          component={
+            <div className="flex flex-wrap gap-20 px-20 justify-center items-center">
+              <ButtonAndToast
+                title="Bottom toast"
+                description="Lorem ipsum dolor sit amet"
+                variant="success"
+                position="bottom"
+              >
+                Bottom toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Bottom-left toast"
+                description="Lorem ipsum dolor sit amet"
+                variant="success"
+                position="bottom-left"
+              >
+                Bottom-left toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Top-left toast"
+                description="Lorem ipsum dolor sit amet"
+                variant="success"
+                position="top-left"
+              >
+                Top-left toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Top toast"
+                description="Lorem ipsum dolor sit amet"
+                variant="success"
+                position="top"
+              >
+                Top toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Top-right toast"
+                description="Lorem ipsum dolor sit amet"
+                variant="success"
+                position="top-right"
+              >
+                Top-right toast
+              </ButtonAndToast>
+              <ButtonAndToast
+                title="Bottom-right toast"
+                description="Lorem ipsum dolor sit amet"
+                variant="success"
+                position="bottom-right"
+              >
+                Bottom-right toast
+              </ButtonAndToast>
+            </div>
+          }
+          code={`
+          
+    <div>
+        <Toast title="Bottom toast" variant="success" position="bottom">Lorem ipsum dolor sit amet</Toast>
+        <Toast title="Bottom-left toast" variant="success" position="bottom-left">Lorem ipsum dolor sit amet</Toast>
+        <Toast title="Top-left toast" variant="success" position="top-left">Lorem ipsum dolor sit amet</Toast>
+        <Toast title="Top toast" variant="success" position="top">Lorem ipsum dolor sit amet</Toast>
+        <Toast title="Top-right toast" variant="success" position="top-right">Lorem ipsum dolor sit amet</Toast>
+        <Toast title="Bottom-right toast" variant="success" position="bottom-right">Lorem ipsum dolor sit amet</Toast>
+    </div>
+         `}
+        />
+      </div>
+    </div>
+  );
 }

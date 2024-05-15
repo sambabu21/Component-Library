@@ -14,7 +14,7 @@ export default function Button({
   let sizeClass = size && `btn-${size}`;
   let variantClass = variant && `btn-${variant}`;
   let colorClass = color && `btn-${color}-${variant}`
-  const allClasses = classnames(sizeClass, variantClass, colorClass, className);
+  const allClasses = classnames(sizeClass, variantClass, colorClass, className,"select-none");
 
 
   return (
