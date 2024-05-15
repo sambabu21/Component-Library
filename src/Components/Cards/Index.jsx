@@ -9,9 +9,9 @@ import CardActions from "./CardActions";
 import Button from "../Button/Button";
 
 export default function CardSection() {
-  // useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div className="flex justify-center items-center">
       <div className="max-w-3xl flex flex-col items-start p-20 gap-10">

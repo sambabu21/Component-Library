@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import PreviewCode from "../../PreviewCode/Index";
 import ButtonAndToast from "./ButtonAndToast";
 
 export default function ToastSection() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div className="flex justify-center items-center">
       <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
@@ -134,7 +138,7 @@ export default function ToastSection() {
             </div>
           }
           code={`
-          
+
     <div>
         <Toast title="Bottom toast" variant="success" position="bottom">Lorem ipsum dolor sit amet</Toast>
         <Toast title="Bottom-left toast" variant="success" position="bottom-left">Lorem ipsum dolor sit amet</Toast>
