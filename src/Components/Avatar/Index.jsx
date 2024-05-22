@@ -19,7 +19,7 @@ export default function AvatarSection() {
       <SubSection>
         <PreviewCode
           component={
-            <div className="flex justify-center items-center gap-20">
+            <div className="flex justify-center items-center gap-5 sm:gap-20">
               <Avatar size="small" />
               <Avatar />
               <Avatar size="large" />
@@ -38,7 +38,7 @@ export default function AvatarSection() {
       <SubSection>
       <PreviewCode
         component={
-          <div className="flex justify-center items-center gap-20">
+          <div className="flex justify-center items-center gap-5 sm:gap-20">
             <Avatar size="small">SB</Avatar>
             <Avatar>SB</Avatar>
             <Avatar size="large">SB</Avatar>
@@ -55,7 +55,7 @@ export default function AvatarSection() {
       <Subheading>Avatars with image</Subheading>
       <SubSection>
       <PreviewCode component={
-      <div className="flex justify-center items-center gap-20">
+      <div className="flex justify-center items-center gap-5 sm:gap-20">
           <Avatar src={proPic} size="small" />
           <Avatar src={proPic} />
           <Avatar src={proPic} size="large" />

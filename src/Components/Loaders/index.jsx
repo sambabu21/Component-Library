@@ -33,7 +33,7 @@ export default function LoaderSection() {
       <SubSection>
         <PreviewCode
           component={
-            <div className="flex justify-center items-center gap-20">
+            <div className="flex justify-center items-center gap-10 sm:gap-20">
                 <Loader />
                 <Loader type="dots"/>
                 <Loader type="dotspin"/>

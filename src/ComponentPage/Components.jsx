@@ -7,11 +7,11 @@ export default function Components() {
   //   window.scrollTo(0, 0);
   // }, []);
   return (
-    <div className="min-h-screen lg:w-[768px] flex flex-col justify-center items-start py-20">
+    <div className="min-h-screen w-full lg:w-[768px] flex flex-col justify-center items-center sm:items-start py-20  ">
       <h1 className="text-2xl sm:text-4xl font-bold tracking-tighter text-[#EEEEEE]">
         Defix UI components
       </h1>
-      <p className=" mt-5 text-[#B4B4B4] tracking-normal leading-[1.6]">
+      <p className=" mt-5 text-[#B4B4B4] tracking-normal leading-[1.6] px-5 sm:px-0">
         Defix UI aims to provide building blocks for developers to create great
         user interfaces using prebuilt components.
       </p>
@@ -19,7 +19,7 @@ export default function Components() {
         <h1 className="font-semibold text-lg md:text-2xl mb-10 text-[#EEEEEE] tracking-tight">
           General
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[300px] sm:w-full">
           <ComponentContainer title="Avatars">
             <div className="w-[50px] h-[50px] border-2 border-[#BAA7FF] rounded-full flex justify-center items-center">
               <h1 className="text-[#BAA7FF]">SB</h1>
@@ -70,10 +70,10 @@ export default function Components() {
             </div>
           </ComponentContainer>
         </div>
-        <h1 className="font-semibold text-lg md:text-2xl my-10 text-[#EEEEEE] tracking-tight">
+        <h1 className="font-semibold text-lg md:text-2xl mt-20 my-10 text-[#EEEEEE] tracking-tight">
           Feedback
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[300px] sm:w-full">
           <ComponentContainer title="Alerts">
             <div className="w-[180px] h-[70px] rounded-[10px] border border-[#BAA7FF]  flex justify-start p-5 items-start gap-3">
               <div className="w-4 h-4 bg-[#BAA7FF] rounded-full"></div>
@@ -97,7 +97,7 @@ export default function Components() {
         <h1 className="font-semibold text-2xl mt-20 my-10 text-[#EEEEEE]">
           Data display
         </h1>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[300px] sm:w-full">
           <ComponentContainer title="Cards">
             <div className="w-[150px] h-[100px] rounded-[2px] flex flex-col  bg-[#e2ddfe2d] justify-center  gap-2 relative">
               <span className="w-[130px] h-[40px] bg-[#BAA7FF] mx-auto"></span>

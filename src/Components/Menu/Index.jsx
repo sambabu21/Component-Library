@@ -41,18 +41,17 @@ export default function MenuSection() {
               </Menu>
             </div>
           }
-          code={`
-    <div>
-      <Menu>
-        <MenuButton>Dashboard</MenuButton>
-        <MenuDropdown>
-          <MenuItem>Profile</MenuItem>
-          <MenuItem>Settings</MenuItem>
-          <MenuItem>Logout</MenuItem>
-        </MenuDropdown>
-      </Menu>
-    </div>
-          `}
+          code={
+`<div>
+  <Menu>
+    <MenuButton>Dashboard</MenuButton>
+    <MenuDropdown>
+      <MenuItem>Profile</MenuItem>
+      <MenuItem>Settings</MenuItem>
+      <MenuItem>Logout</MenuItem>
+    </MenuDropdown>
+  </Menu>
+</div>`}
         />
       </SubSection>
 
@@ -71,18 +70,17 @@ export default function MenuSection() {
               </Menu>
             </div>
           }
-          code={`
-    <div>
-      <Menu>
-        <MenuButton>Dashboard</MenuButton>
-        <MenuDropdown>
-          <MenuItem icon={<IconComponent />}>Profile</MenuItem>
-          <MenuItem icon={<IconComponent />}>Settings</MenuItem>
-          <MenuItem icon={<IconComponent />}>Logout</MenuItem>
-        </MenuDropdown>
-      </Menu>
-    </div>
-          `}
+          code={
+`<div>
+  <Menu>
+    <MenuButton>Dashboard</MenuButton>
+    <MenuDropdown>
+      <MenuItem icon={<IconComponent />}>Profile</MenuItem>
+      <MenuItem icon={<IconComponent />}>Settings</MenuItem>
+      <MenuItem icon={<IconComponent />}>Logout</MenuItem>
+    </MenuDropdown>
+  </Menu>
+</div>`}
         />
       </SubSection>
 
@@ -105,22 +103,21 @@ export default function MenuSection() {
               </Menu>
             </div>
           }
-          code={`
-    <div>
-      <Menu>
-        <MenuButton>Dashboard</MenuButton>
-        <MenuDropdown>
-          <MenuItem icon={<IconComponent />}>Profile</MenuItem>
-          <MenuItem icon={<IconComponent />}>Settings</MenuItem>
-          <MenuItem icon={<IconComponent />}>Logout</MenuItem>
-          <MenuSeperator />
-          <MenuItem icon={<IconComponent />}>Help</MenuItem>
-          <MenuItem icon={<IconComponent />}>Docs</MenuItem>
-          <MenuItem icon={<IconComponent />}>FAQ</MenuItem>
-        </MenuDropdown>
-      </Menu>
-    </div>
-          `}
+          code={
+`<div>
+  <Menu>
+    <MenuButton>Dashboard</MenuButton>
+    <MenuDropdown>
+      <MenuItem icon={<IconComponent />}>Profile</MenuItem>
+      <MenuItem icon={<IconComponent />}>Settings</MenuItem>
+      <MenuItem icon={<IconComponent />}>Logout</MenuItem>
+      <MenuSeperator />
+      <MenuItem icon={<IconComponent />}>Help</MenuItem>
+      <MenuItem icon={<IconComponent />}>Docs</MenuItem>
+      <MenuItem icon={<IconComponent />}>FAQ</MenuItem>
+    </MenuDropdown>
+  </Menu>
+</div>`}
         />
       </SubSection>
 
@@ -147,26 +144,25 @@ export default function MenuSection() {
               </Menu>
             </div>
           }
-          code={`
-    <div>
-      <Menu>
-        <MenuButton>Dashboard</MenuButton>
-        <MenuDropdown>
-          <MenuGroup title="Profile">
-            <MenuItem icon={<IconComponent />}>Profile</MenuItem>
-            <MenuItem icon={<IconComponent />}>Settings</MenuItem>
-            <MenuItem icon={<IconComponent />}>Logout</MenuItem>
-          </MenuGroup>
-          <MenuSeperator />
-          <MenuGroup title="Help">
-            <MenuItem icon={<IconComponent />}>Help</MenuItem>
-            <MenuItem icon={<IconComponent />}>Docs</MenuItem>
-            <MenuItem icon={<IconComponent />}>FAQ</MenuItem>
-          </MenuGroup>
-        </MenuDropdown>
-      </Menu>
-    </div>
-          `}
+          code={
+`<div>
+  <Menu>
+    <MenuButton>Dashboard</MenuButton>
+    <MenuDropdown>
+      <MenuGroup title="Profile">
+        <MenuItem icon={<IconComponent />}>Profile</MenuItem>
+        <MenuItem icon={<IconComponent />}>Settings</MenuItem>
+        <MenuItem icon={<IconComponent />}>Logout</MenuItem>
+      </MenuGroup>
+      <MenuSeperator />
+      <MenuGroup title="Help">
+        <MenuItem icon={<IconComponent />}>Help</MenuItem>
+        <MenuItem icon={<IconComponent />}>Docs</MenuItem>
+        <MenuItem icon={<IconComponent />}>FAQ</MenuItem>
+      </MenuGroup>
+    </MenuDropdown>
+  </Menu>
+</div>`}
         />
       </SubSection>
 
@@ -174,7 +170,7 @@ export default function MenuSection() {
       <SubSection>
         <PreviewCode
           component={
-            <div className="flex justify-center items-center gap-20 w-full px-20">
+            <div className="flex flex-wrap justify-center items-center gap-20 w-full px-20">
               <Menu>
                 <MenuButton type="hamburger">Dashboard</MenuButton>
                 <MenuDropdown>
@@ -229,15 +225,4 @@ export default function MenuSection() {
   );
 }
 
-{
-  /* 
 
-      
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          
-        </h3>
-        
-
-      </div>
-    </div> */
-}

@@ -20,7 +20,7 @@ export default function ButtonSection() {
       <SubSection>
         <PreviewCode
           component={
-            <div className="flex justify-center items-center gap-10 w-full">
+            <div className="flex flex-wrap justify-center items-center gap-10 w-full">
               <Button variant="outline">Outline</Button>
               <Button>Filled</Button>
               <Button variant="text">Text</Button>
@@ -99,13 +99,13 @@ export default function ButtonSection() {
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
-              <div className="flex justify-center items-center gap-10">
+              <div className="flex flex-wrap justify-center items-center gap-10">
                 <Button color="red">Red</Button>
                 <Button color="blue">Blue</Button>
                 <Button color="green">Green</Button>
                 <Button color="yellow">Yellow</Button>
               </div>
-              <div className="flex justify-center items-center gap-10">
+              <div className="flex flex-wrap justify-center items-center gap-10">
                 <Button variant="outline" color="red">
                   Red
                 </Button>
@@ -119,7 +119,7 @@ export default function ButtonSection() {
                   Yellow
                 </Button>
               </div>
-              <div className="flex justify-center items-center gap-10">
+              <div className="flex flex-wrap justify-center items-center gap-10">
                 <Button variant="text" color="red">
                   Red
                 </Button>
@@ -165,12 +165,12 @@ export default function ButtonSection() {
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
-              <div className="flex justify-center items-center gap-10">
+              <div className="flex justify-center items-center gap-2 sm:gap-10">
                 <Button size="small">Small</Button>
                 <Button>Medium</Button>
                 <Button size="large">Large</Button>
               </div>
-              <div className="flex justify-center items-center gap-10">
+              <div className="flex justify-center items-center gap-2 sm:gap-10">
                 <Button variant="outline" size="small">
                   Small
                 </Button>
@@ -179,7 +179,7 @@ export default function ButtonSection() {
                   Large
                 </Button>
               </div>
-              <div className="flex justify-center items-center gap-10">
+              <div className="flex justify-center items-center gap-2 sm:gap-10">
                 <Button variant="text" size="small">
                   Small
                 </Button>

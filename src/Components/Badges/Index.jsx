@@ -63,7 +63,7 @@ export default function BadgesSection() {
       <SubSection>
         <PreviewCode
           component={
-            <div className="flex justify-center items-center gap-10">
+            <div className="flex flex-wrap justify-center items-center gap-10">
               <Badge color="red">Label</Badge>
               <Badge color="blue">Label</Badge>
               <Badge color="yellow">Label</Badge>
@@ -84,7 +84,7 @@ export default function BadgesSection() {
       <SubSection>
         <PreviewCode
           component={
-            <div className="flex justify-center items-center gap-10">
+            <div className="flex justify-center items-center gap-5 sm:gap-10">
               <Badge startIcon={<GoDotFill />}>Label</Badge>
               <Badge stopIcon={<FaXmark />}>Label</Badge>
               <Badge startIcon={<GoDotFill />} stopIcon={<FaXmark />}>
