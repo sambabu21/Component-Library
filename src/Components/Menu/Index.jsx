@@ -13,23 +13,21 @@ import MenuGroup from "./MenuGroup";
 import proPic from "../../Assets/avatar_pic.jpeg";
 import PreviewCode from "../../PreviewCode/Index";
 import { useEffect } from "react";
+import DisplaySection from "../../Common Components/DisplaySection/Index";
+import Subheading from "../../Common Components/DisplaySection/Subheading";
+import SubSection from "../../Common Components/DisplaySection/SubSection";
 
 export default function MenuSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className=" flex justify-center items-center">
-      <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
-        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
-          Menu
-        </h1>
-        <h2 className="text-[#B4B4B4] -mt-5">
-          A dropdown allows a user to select a value from a series of options.
-        </h2>
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Default Menu
-        </h3>
+    <DisplaySection
+      sectionTitle="Menu"
+      sectionDescription="A dropdown allows a user to select a value from a series of options."
+    >
+      <Subheading>Default Menu</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -56,10 +54,10 @@ export default function MenuSection() {
     </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Menu with icons
-        </h3>
+      <Subheading>Menu with icons</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -86,10 +84,10 @@ export default function MenuSection() {
     </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Menu with icons and seperator
-        </h3>
+      <Subheading>Menu with icons and seperator</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -124,10 +122,10 @@ export default function MenuSection() {
     </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Menu with icons, seperator and groups
-        </h3>
+      <Subheading>Menu with icons, seperator and groups</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -170,10 +168,10 @@ export default function MenuSection() {
     </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Menu types
-        </h3>
+      <Subheading>Menu types</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-20 w-full px-20">
@@ -226,8 +224,20 @@ export default function MenuSection() {
           </div>
           `}
         />
+      </SubSection>
+    </DisplaySection>
+  );
+}
+
+{
+  /* 
+
+      
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          
+        </h3>
+        
 
       </div>
-    </div>
-  );
+    </div> */
 }

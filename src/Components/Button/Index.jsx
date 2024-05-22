@@ -1,25 +1,23 @@
 import { useEffect } from "react";
 import PreviewCode from "../../PreviewCode/Index";
 import Button from "./Button";
+import DisplaySection from "../../Common Components/DisplaySection/Index";
+import Subheading from "../../Common Components/DisplaySection/Subheading";
+import SubSection from "../../Common Components/DisplaySection/SubSection";
 
 export default function ButtonSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className=" flex justify-center items-center">
-      <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
-        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
-          Buttons
-        </h1>
-        <h2 className="text-[#B4B4B4] -mt-5">
-          Buttons communicate actions that users can take. They are typically
-          placed throughout your UI, in places like: Dialogs, Forms, Toolbars,
-          etc.
-        </h2>
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Button types
-        </h3>
+    <DisplaySection
+      sectionTitle="Buttons"
+      sectionDescription="Buttons communicate actions that users can take. They are typically
+    placed throughout your UI, in places like: Dialogs, Forms, Toolbars,
+    etc."
+    >
+      <Subheading>Button types</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-10 w-full">
@@ -36,10 +34,10 @@ export default function ButtonSection() {
           </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Default filled button
-        </h3>
+      <Subheading>Default filled button</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-10 w-full">
@@ -54,10 +52,10 @@ export default function ButtonSection() {
           </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Outlined button
-        </h3>
+      <Subheading>Outlined button</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-10 w-full">
@@ -74,10 +72,10 @@ export default function ButtonSection() {
           </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Text button
-        </h3>
+      <Subheading>Text button</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-10 w-full">
@@ -94,10 +92,10 @@ export default function ButtonSection() {
           </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Colored buttons
-        </h3>
+      <Subheading>Colored buttons</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -160,10 +158,10 @@ export default function ButtonSection() {
           </div>
           `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Button sizes
-        </h3>
+      <Subheading>Button sizes</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -212,7 +210,8 @@ export default function ButtonSection() {
           </div>
           `}
         />
-      </div>
-    </div>
+      </SubSection>
+    </DisplaySection>
   );
 }
+

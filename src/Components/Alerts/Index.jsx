@@ -1,24 +1,22 @@
 import { useEffect } from "react";
 import Alert from "./Alert";
 import PreviewCode from "../../PreviewCode/Index";
+import DisplaySection from "../../Common Components/DisplaySection/Index";
+import Subheading from "../../Common Components/DisplaySection/Subheading";
+import SubSection from "../../Common Components/DisplaySection/SubSection";
 
 export default function AlertSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="flex justify-center items-center">
-      <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
-        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
-          Alerts
-        </h1>
-        <h2 className="text-[#B4B4B4] -mt-5">
-          Alerts are interactive elements that convey important information,
-          warnings, or notifications to users.
-        </h2>
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Default alert
-        </h3>
+    <DisplaySection
+      sectionTitle="Alerts"
+      sectionDescription="Alerts are interactive elements that convey important information,
+      warnings, or notifications to users."
+    >
+      <Subheading>Default alert</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-10 w-full">
@@ -28,18 +26,15 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={`
-          <div>
-              <Alert title="We've just released a new feature">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt
-              </Alert>
-          </div>
-          `}
+          code={
+`<div>
+  <Alert title="We've just released a new feature"> {Alert Text} </Alert>
+</div>`}
         />
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Alerts without icon
-        </h3>
+      </SubSection>
+
+      <Subheading>Alerts without icon</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center flex-col items-center gap-10 w-full">
@@ -73,31 +68,18 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={`
-          <div>
-            <Alert title="Update Now" type="success" iconRequired={false}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt
-            </Alert>
-            <Alert title="This might be a problem" type="warning" iconRequired={false}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert title="There was a problem with that action" type="error" iconRequired={false}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert title="We've just released a new feature" type="neutral" iconRequired={false}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-          </div>  
-          `}
+          code={
+`<div>
+  <Alert title="Update Now" type="success" iconRequired={false}> {Alert Text} </Alert>
+  <Alert title="This might be a problem" type="warning" iconRequired={false}> {Alert Text} </Alert>
+  <Alert title="There was a problem with that action" type="error" iconRequired={false}> {Alert Text} </Alert>
+  <Alert title="We've just released a new feature" type="neutral" iconRequired={false}> {Alert Text} </Alert>
+</div>`}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Alert with supportive text only
-        </h3>
+      <Subheading>Alert with supportive text only</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex flex-col justify-center items-center gap-10 w-full">
@@ -117,27 +99,15 @@ export default function AlertSection() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt
               </Alert>
-                </div>
+            </div>
           }
-          code={`
-          <div>
-            <Alert type="success">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert type="warning">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert type="error">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert type="neutral">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-          `}
+          code={
+`<div>
+  <Alert type="success"> {Alert Text} </Alert>
+  <Alert type="warning"> {Alert Text} </Alert>
+  <Alert type="error"> {Alert Text} </Alert>
+  <Alert type="neutral"> {Alert Text} </Alert>
+</div>`}
         />
 
         <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
@@ -164,28 +134,15 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={`
-          <div>
-            <Alert title="Update Now" type="success">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert title="This might be a problem" type="warning">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert title="There was a problem with that action" type="error">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-            <Alert title="We've just released a new feature" type="neutral">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </Alert>
-          </div>
-          `}
+          code={
+`<div>
+  <Alert title="Update Now" type="success"> {Alert Text} </Alert>
+  <Alert title="This might be a problem" type="warning"> {Alert Text} </Alert>
+  <Alert title="There was a problem with that action" type="error"> {Alert Text} </Alert>
+  <Alert title="We've just released a new feature" type="neutral"> {Alert Text} </Alert>
+</div>`}
         />
-      </div>
-    </div>
+      </SubSection>
+    </DisplaySection>
   );
 }

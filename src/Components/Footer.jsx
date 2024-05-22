@@ -1,8 +1,10 @@
 export default function Footer() {
     return (
-      <div className="h-20 flex justify-between items-center border-t border-[#3A3A3A] bg-[#111111] w-full px-10 sm:px-[10vw] gap-10">
+      <div className="h-16 border-t border-[#2A2A2A] bg-[#111111]">
+        <div className="h-16 max-w-[968px] flex justify-between items-center mx-auto px-5">
         <h1 className="font-medium text-[10px] md:text-[14px] text-white w-1/2 ">&copy; 2024 Samjove Babu . All rights reserved.</h1>
         <h1 className="font-medium text-[10px] md:text-[14px] text-white w-1/2 text-right ">Defix UI</h1>
+        </div>
       </div>
     );
   }

@@ -1,25 +1,23 @@
 import { useEffect } from "react";
 import PreviewCode from "../../PreviewCode/Index";
 import ButtonAndToast from "./ButtonAndToast";
+import DisplaySection from "../../Common Components/DisplaySection/Index";
+import Subheading from "../../Common Components/DisplaySection/Subheading";
+import SubSection from "../../Common Components/DisplaySection/SubSection";
 
 export default function ToastSection() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="flex justify-center items-center">
-      <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
-        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
-          Toasts
-        </h1>
-        <h2 className="text-[#B4B4B4] -mt-5">
-          Toasts display brief, temporary notifications. They're meant to be
-          noticed without disrupting a user's experience or requiring an action
-          to be taken.
-        </h2>
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Default Toast
-        </h3>
+    <DisplaySection
+      sectionTitle="Toasts"
+      sectionDescription="Toasts display brief, temporary notifications. They're meant to be
+    noticed without disrupting a user's experience or requiring an action
+    to be taken."
+    >
+      <Subheading>Default Toast</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <ButtonAndToast
@@ -35,10 +33,10 @@ export default function ToastSection() {
     </div>
          `}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Types of toasts
-        </h3>
+      <Subheading>Types of toasts</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex flex-wrap gap-20 px-20 justify-center items-center">
@@ -81,9 +79,10 @@ export default function ToastSection() {
     </div>
          `}
         />
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Toast positioning
-        </h3>
+      </SubSection>
+
+      <Subheading>Toast positioning</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex flex-wrap gap-20 px-20 justify-center items-center">
@@ -149,7 +148,7 @@ export default function ToastSection() {
     </div>
          `}
         />
-      </div>
-    </div>
+      </SubSection>
+    </DisplaySection>
   );
 }

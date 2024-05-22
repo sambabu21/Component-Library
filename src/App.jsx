@@ -15,6 +15,8 @@ import AvatarSection from "./Components/Avatar/Index";
 import ComponentDetailLayout from "./Layout/ComponentDetailLayout";
 import AlertSection from "./Components/Alerts/Index";
 import { createContext, useState } from "react";
+import ToggleSection from "./Components/Toggles/Index";
+import LoaderSection from "./Components/Loaders";
 
 const NavContext = createContext();
 export { NavContext };
@@ -38,6 +40,8 @@ function App() {
               <Route path="/components/toasts" element={<ToastSection />} />
               <Route path="/components/tooltips" element={<TooltipSection />} />
               <Route path="/components/cards" element={<CardSection />} />
+              <Route path="/components/toggles" element={<ToggleSection />} />
+              <Route path="/components/loaders" element={<LoaderSection />} />
               <Route
                 path="/components/testimonials"
                 element={<TestimonialsSection />}

@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../Components/Sidebar";
+import Sidebar from "../Components/Sidebar/Sidebar";
 
 export default function ComponentDetailLayout() {
   return (
     <div className="flex justify-center items-center">
-      <div className="flex justify-center  mx-auto">
+      <div className="flex justify-center  mx-auto ">
         <Sidebar />
         <Outlet />
       </div>

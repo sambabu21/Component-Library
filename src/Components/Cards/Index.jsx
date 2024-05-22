@@ -7,24 +7,22 @@ import CardBody from "./CardBody";
 import coffeeImg from "../../Assets/Coffee.webp";
 import CardActions from "./CardActions";
 import Button from "../Button/Button";
+import DisplaySection from "../../Common Components/DisplaySection/Index";
+import Subheading from "../../Common Components/DisplaySection/Subheading";
+import SubSection from "../../Common Components/DisplaySection/SubSection";
 
 export default function CardSection() {
   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="flex justify-center items-center">
-      <div className="max-w-3xl flex flex-col items-start p-20 gap-10">
-        <h1 className="font-semibold text-2xl text-[#EEEEEE] tracking-tight selection:">
-          Avatar
-        </h1>
-        <h2 className="text-[#B4B4B4] -mt-5">
-          A card is a UI design pattern that groups related information in a
-          flexible-size container visually resembling a playing card.
-        </h2>
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Default card
-        </h3>
+    <DisplaySection
+      sectionTitle="Cards"
+      sectionDescription="A card is a UI design pattern that groups related information in a
+    flexible-size container visually resembling a playing card."
+    >
+      <Subheading>Default card</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-20">
@@ -46,9 +44,10 @@ export default function CardSection() {
       </Card>          
     </div>`}
         />
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Cards with icons
-        </h3>
+      </SubSection>
+
+      <Subheading>Cards with icons</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-20">
@@ -69,11 +68,10 @@ export default function CardSection() {
       </Card>          
     </div>`}
         />
+      </SubSection>
 
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Cards with images
-        </h3>
-
+      <Subheading>Cards with images</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-20">
@@ -95,12 +93,10 @@ export default function CardSection() {
       </Card>          
     </div>`}
         />
+      </SubSection>
 
-
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Cards with image and action buttons
-        </h3>
-
+      <Subheading>Cards with image and action buttons</Subheading>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex justify-center items-center gap-20">
@@ -134,7 +130,20 @@ export default function CardSection() {
       </Card>          
     </div>`}
         />
-      </div>
-    </div>
+      </SubSection>
+    </DisplaySection>
   );
+}
+
+{
+  /*
+        
+  
+        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
+          
+        </h3>
+
+        
+      </div>
+    </div> */
 }
