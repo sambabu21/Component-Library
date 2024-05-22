@@ -17,7 +17,7 @@ export default function Header() {
         {navOpen ? <IoClose className="text-[#6E56CF] w-8 h-8 md:hidden" onClick={toggleNav}/> : <HiOutlineMenu className="text-[#6E56CF] w-8 h-8 md:hidden" onClick={toggleNav}/>}
         <Link to="/" className="font-bold text-center text-2xl sm:text-4xl text-[white]  tracking-tight">Defix UI</Link>
         </div>
-        <Link to="/components" className="text-[#EEEEEE] flex justify-center items-center font-semibold rounded-full px-[16px] border border-[#6E56CF] h-[36px] hover:shadow-[0px_0px_10px_7px_#291F43]">Components</Link>
+        <Link to="/components" className="text-[#EEEEEE] flex justify-center items-center font-semibold rounded-full text-[14px] sm:text-[16px] px-[12px] sm:px-[16px] border border-[#6E56CF] h-[36px] hover:shadow-[0px_0px_10px_7px_#291F43]">Components</Link>
       </div>
     </div>
     
