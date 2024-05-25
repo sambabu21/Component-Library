@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
+import Subtext from "../../Common Components/DisplaySection/Subtext";
 
 export default function MenuSection() {
   useEffect(() => {
@@ -24,9 +25,10 @@ export default function MenuSection() {
   return (
     <DisplaySection
       sectionTitle="Menu"
-      sectionDescription="A dropdown allows a user to select a value from a series of options."
+      sectionDescription="A menu allows a user to select a value from a series of options."
     >
       <Subheading>Default Menu</Subheading>
+      <Subtext>Default menu. Use the <span className="prop">MenuButton</span> to render the text required inside the menu toggler. Use the <span className="prop">MenuDropdown</span> and <span className="prop">MenuItem</span> to render the options list.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -56,6 +58,7 @@ export default function MenuSection() {
       </SubSection>
 
       <Subheading>Menu with icons</Subheading>
+      <Subtext>Use the <span className="prop">icon</span> prop in the <span className="prop">MenuItem</span> tag to pass in icons which gets rendered to the left of the dropdown list items.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -85,6 +88,7 @@ export default function MenuSection() {
       </SubSection>
 
       <Subheading>Menu with icons and seperator</Subheading>
+      <Subtext>Use the <span className="prop">MenuSeperator</span> prop to create a seperation between dropdown list items.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -122,6 +126,7 @@ export default function MenuSection() {
       </SubSection>
 
       <Subheading>Menu with icons, seperator and groups</Subheading>
+      <Subtext>Use the <span className="prop">MenuGroup</span> tag to group list items to a group. Use the <span className="prop">title</span> prop in <span className="prop">MenuGroup</span> to give the grouped list items a heading.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -167,12 +172,13 @@ export default function MenuSection() {
       </SubSection>
 
       <Subheading>Menu types</Subheading>
+      <Subtext>Use the <span className="prop">type</span> prop to change the item render in the <span className="prop">MenuButton</span>. If you use this prop and pass in children to this component, it will ignore the children text.</Subtext>
       <SubSection>
         <PreviewCode
           component={
             <div className="flex flex-wrap justify-center items-center gap-20 w-full px-20">
               <Menu>
-                <MenuButton type="hamburger">Dashboard</MenuButton>
+                <MenuButton type="hamburger"/>
                 <MenuDropdown>
                   <MenuItem icon={<RxAvatar />}>Profile</MenuItem>
                   <MenuItem icon={<IoSettingsOutline />}>Settings</MenuItem>
@@ -180,7 +186,7 @@ export default function MenuSection() {
                 </MenuDropdown>
               </Menu>
               <Menu>
-                <MenuButton type="kebab">Dashboard</MenuButton>
+                <MenuButton type="kebab" />
                 <MenuDropdown>
                   <MenuItem icon={<RxAvatar />}>Profile</MenuItem>
                   <MenuItem icon={<IoSettingsOutline />}>Settings</MenuItem>
@@ -188,9 +194,7 @@ export default function MenuSection() {
                 </MenuDropdown>
               </Menu>
               <Menu>
-                <MenuButton type="avatar" avatar={proPic}>
-                  Dashboard
-                </MenuButton>
+                <MenuButton type="avatar" avatar={proPic} />
                 <MenuDropdown>
                   <MenuItem icon={<RxAvatar />}>Profile</MenuItem>
                   <MenuItem icon={<IoSettingsOutline />}>Settings</MenuItem>
@@ -198,7 +202,7 @@ export default function MenuSection() {
                 </MenuDropdown>
               </Menu>
               <Menu>
-                <MenuButton type="avatar">Dashboard</MenuButton>
+                <MenuButton type="avatar" />
                 <MenuDropdown>
                   <MenuItem icon={<RxAvatar />}>Profile</MenuItem>
                   <MenuItem icon={<IoSettingsOutline />}>Settings</MenuItem>
@@ -207,18 +211,17 @@ export default function MenuSection() {
               </Menu>
             </div>
           }
-          code={`
-          <div>
-            <Menu>
-              <MenuButton>Dashboard</MenuButton>
-              <MenuDropdown>
-                <MenuItem>Profile</MenuItem>
-                <MenuItem>Settings</MenuItem>
-                <MenuItem>Logout</MenuItem>
-              </MenuDropdown>
-            </Menu>
-          </div>
-          `}
+          code={
+`<div>
+    <Menu>
+        <MenuButton type={type} />
+        <MenuDropdown>
+            <MenuItem>Profile</MenuItem>
+            <MenuItem>Settings</MenuItem>
+            <MenuItem>Logout</MenuItem>
+        </MenuDropdown>
+    </Menu>
+</div>`}
         />
       </SubSection>
     </DisplaySection>

@@ -3,9 +3,9 @@ import ComponentContainer from "./ComponentContainer";
 import { FaRegHandPointer } from "react-icons/fa";
 
 export default function Components() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen w-full lg:w-[768px] flex flex-col justify-center items-center sm:items-start py-20  ">
       <h1 className="text-2xl sm:text-4xl font-bold tracking-tighter text-[#EEEEEE]">
@@ -33,11 +33,13 @@ export default function Components() {
               </div>
             </div>
           </ComponentContainer>
-
           <ComponentContainer title="Buttons">
             <div className=" px-[20px] py-[15px] flex justify-center items-center border rounded-[8px] border-[#BAA7FF]">
               <div className="w-[60px] h-[4px] bg-[#BAA7FF] rounded-full"></div>
             </div>
+          </ComponentContainer>
+          <ComponentContainer title="Loaders">
+              <div className="w-[40px] h-[40px] rounded-full border-4 border-[#e2ddfe2d] border-r-[#BAA7FF]"></div>
           </ComponentContainer>
           <ComponentContainer title="Menu">
             <div className="flex flex-col gap-2">
@@ -57,8 +59,12 @@ export default function Components() {
               </div>
             </div>
           </ComponentContainer>
-
-          <ComponentContainer title="Tooltip">
+          <ComponentContainer title="Toggles">
+            <div className="w-[50px] h-[20px] rounded-full bg-[#e2ddfe34] flex justify-end items-center">
+              <span className="w-[30px] h-[30px] bg-[#BAA7FF] rounded-full"></span>
+            </div>
+          </ComponentContainer>
+          <ComponentContainer title="Tooltips">
             <div className="flex flex-col justify-center items-center gap-5">
               <div className="w-[120px] h-[40px] flex flex-col justify-center items-center rounded-[5px] bg-[#BAA7FF] border border-[#BAA7FF] z-10 relative gap-2">
                 <span className="h-[4px] w-20 bg-[#111111] rounded-full"></span>
@@ -70,9 +76,12 @@ export default function Components() {
             </div>
           </ComponentContainer>
         </div>
+
+
         <h1 className="font-semibold text-lg md:text-2xl mt-20 my-10 text-[#EEEEEE] tracking-tight">
           Feedback
         </h1>
+
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[300px] sm:w-full">
           <ComponentContainer title="Alerts">
             <div className="w-[180px] h-[70px] rounded-[10px] border border-[#BAA7FF]  flex justify-start p-5 items-start gap-3">
@@ -94,9 +103,11 @@ export default function Components() {
           </ComponentContainer>
         </div>
 
+
         <h1 className="font-semibold text-2xl mt-20 my-10 text-[#EEEEEE]">
           Data display
         </h1>
+
         <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-[300px] sm:w-full">
           <ComponentContainer title="Cards">
             <div className="w-[150px] h-[100px] rounded-[2px] flex flex-col  bg-[#e2ddfe2d] justify-center  gap-2 relative">
@@ -114,7 +125,6 @@ export default function Components() {
                 <span className="w-[100px] h-[4px] bg-[#7B7B7B] rounded-full"></span>
                 <span className="w-[100px] h-[4px] bg-[#7B7B7B] rounded-full"></span>
                 <span className="w-[50px] h-[4px] bg-[#BAA7FF] rounded-full"></span>
-            
             </div>
           </ComponentContainer>
         </div>

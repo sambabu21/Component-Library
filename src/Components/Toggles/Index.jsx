@@ -4,6 +4,7 @@ import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import PreviewCode from "../../PreviewCode/Index";
 import Toggle from "./Toggle";
+import Subtext from "../../Common Components/DisplaySection/Subtext";
 
 export default function ToggleSection() {
     useEffect(() => {
@@ -15,6 +16,7 @@ export default function ToggleSection() {
         sectionDescription="A toggle is a user interface element that allows users to switch between two or more states or options."
       >
         <Subheading>Default switch toggle</Subheading>
+        <Subtext>Default toggle component. Use the <span className="prop">defaultChecked</span> prop to set the default state of the switch as on.</Subtext>
         <SubSection>
           <PreviewCode
             component={
@@ -23,8 +25,8 @@ export default function ToggleSection() {
                 <Toggle defaultChecked />
               </div>
             }
-            code={`
-<div>  
+            code={
+`<div>  
     <Toggle />
     <Togggle defaultChecked />
 </div>`}
@@ -32,6 +34,7 @@ export default function ToggleSection() {
         </SubSection>
   
         <Subheading>Checkbox</Subheading>
+        <Subtext>Use the <span className="prop">type</span> prop to change the switch to a checkbox.</Subtext>
         <SubSection>
           <PreviewCode
             component={
@@ -40,14 +43,15 @@ export default function ToggleSection() {
                 <Toggle type="checkbox" defaultChecked />
               </div>
             }
-            code={`
-<div>  
+            code={
+`<div>  
     <Togggle type="checkbox"/>
     <Togggle type="checkbox" defaultChecked />
 </div>`}
           />
         </SubSection>
         <Subheading>Social media toggles</Subheading>
+        <Subtext>Use the <span className="prop">type</span> prop to change the switch to toggles commonly used in social media apps.</Subtext>
         <SubSection>
           <PreviewCode
             component={
@@ -58,8 +62,8 @@ export default function ToggleSection() {
                 <Toggle type="upvote"/>
               </div>
             }
-            code={`
-<div>  
+            code={
+`<div>  
     <Toggle type="heart"/>
     <Toggle type="star"/>
     <Toggle type="like"/>

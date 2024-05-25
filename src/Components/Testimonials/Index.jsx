@@ -5,6 +5,7 @@ import PreviewCode from "../../PreviewCode/Index";
 import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
+import Subtext from "../../Common Components/DisplaySection/Subtext";
 
 export default function TestimonialsSection() {
   useEffect(() => {
@@ -18,6 +19,7 @@ export default function TestimonialsSection() {
       from or experienced success as a result of the work you did for them."
     >
       <Subheading>Basic testimonial</Subheading>
+      <Subtext> Default testimonial card with dark theme.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -32,17 +34,18 @@ export default function TestimonialsSection() {
               </Testimonial>
             </div>
           }
-          code={`
-<div>  
-<Testimonial name="May Andersons" title="CTO" company="Workcation">
-  Defix UI is one of the best libraries I've came across. Good
-  looking, easy to use and above all super accessible.
+          code={
+`<div>  
+  <Testimonial name="May Andersons" title="CTO" company="Workcation">
+    Defix UI is one of the best libraries I've came across. Good
+    looking, easy to use and above all super accessible.
   </Testimonial>
 </div>`}
         />
       </SubSection>
 
       <Subheading>Testimonial with image</Subheading>
+      <Subtext>Use the <span className="prop">imageUrl</span> prop to pass in the image URL of the individual.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -58,17 +61,18 @@ export default function TestimonialsSection() {
               </Testimonial>
             </div>
           }
-          code={`
-<div>  
-<Testimonial imageUrl={profileImg} name="May Andersons" title="CTO" company="Workcation">
-  Defix UI is one of the best libraries I've came across. Good
-  looking, easy to use and above all super accessible.{" "}
-</Testimonial>
+          code={
+`<div>  
+  <Testimonial imageUrl={profileImg} name="May Andersons" title="CTO" company="Workcation">
+    Defix UI is one of the best libraries I've came across. Good
+    looking, easy to use and above all super accessible.{" "}
+  </Testimonial>
 </div>`}
         />
       </SubSection>
 
       <Subheading>Testimonial in light mode</Subheading>
+      <Subtext>Pass the <span className="prop">lightMode</span> prop to change the theme of the testimonial card to a light theme.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -85,18 +89,18 @@ export default function TestimonialsSection() {
               </Testimonial>
             </div>
           }
-          code={`
-<div>  
-<Testimonial
-    lightMode
-    imageUrl={profileImg}
-    name="May Andersons"
-    title="CTO"
-    company="Workcation"
->
-  Defix UI is one of the best libraries I've came across. Good
-  looking, easy to use and above all super accessible.{" "}
-</Testimonial>
+          code={
+`<div>  
+  <Testimonial
+      lightMode
+      imageUrl={profileImg}
+      name="May Andersons"
+      title="CTO"
+      company="Workcation"
+  >
+    Defix UI is one of the best libraries I've came across. Good
+    looking, easy to use and above all super accessible.{" "}
+  </Testimonial>
 </div>`}
         />
       </SubSection>

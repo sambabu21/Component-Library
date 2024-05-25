@@ -4,6 +4,7 @@ import PreviewCode from "../../PreviewCode/Index";
 import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
+import Subtext from "../../Common Components/DisplaySection/Subtext";
 
 export default function AlertSection() {
   useEffect(() => {
@@ -16,6 +17,11 @@ export default function AlertSection() {
       warnings, or notifications to users."
     >
       <Subheading>Default alert</Subheading>
+      <Subtext>
+        Use the <span className="prop">title</span> prop to pass in the title of
+        the alert. Alert text can be passed in as the{" "}
+        <span className="prop">children</span> to this component.
+      </Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -26,14 +32,17 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={
-`<div>
+          code={`<div>
   <Alert title="We've just released a new feature"> {Alert Text} </Alert>
 </div>`}
         />
       </SubSection>
 
       <Subheading>Alerts without icon</Subheading>
+      <Subtext>
+        Set the <span className="prop">iconRequired</span> prop to false to use
+        the alert without the icon.
+      </Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -68,8 +77,7 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={
-`<div>
+          code={`<div>
   <Alert title="Update Now" type="success" iconRequired={false}> {Alert Text} </Alert>
   <Alert title="This might be a problem" type="warning" iconRequired={false}> {Alert Text} </Alert>
   <Alert title="There was a problem with that action" type="error" iconRequired={false}> {Alert Text} </Alert>
@@ -79,6 +87,12 @@ export default function AlertSection() {
       </SubSection>
 
       <Subheading>Alert with supportive text only</Subheading>
+      <Subtext>
+        Use the <span className="prop">type</span> prop to change the nature of
+        the alert message. If you dont pass in the{" "}
+        <span className="prop">title</span> prop the alert will be made only
+        with the supportive text.
+      </Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -101,18 +115,19 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={
-`<div>
+          code={`<div>
   <Alert type="success"> {Alert Text} </Alert>
   <Alert type="warning"> {Alert Text} </Alert>
   <Alert type="error"> {Alert Text} </Alert>
   <Alert type="neutral"> {Alert Text} </Alert>
 </div>`}
         />
-
-        <h3 className="font-semibold text-xl text-[#EEEEEE] tracking-tight">
-          Full fledged alerts with icons, title and supportive text
-        </h3>
+      </SubSection>
+      <Subheading>
+        Full fledged alerts with icons, title and supportive text
+      </Subheading>
+      <Subtext>Use all the above props in all possible combinations</Subtext>
+      <SubSection>
         <PreviewCode
           component={
             <div className="flex flex-col justify-center items-center gap-10 w-full">
@@ -134,8 +149,7 @@ export default function AlertSection() {
               </Alert>
             </div>
           }
-          code={
-`<div>
+          code={`<div>
   <Alert title="Update Now" type="success"> {Alert Text} </Alert>
   <Alert title="This might be a problem" type="warning"> {Alert Text} </Alert>
   <Alert title="There was a problem with that action" type="error"> {Alert Text} </Alert>

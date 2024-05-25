@@ -4,7 +4,7 @@ export default function Button({
   children,
   className,
   size,
-  variant="filled",
+  variant = "filled",
   isDisabled,
   runOnClick,
   href,
@@ -13,12 +13,23 @@ export default function Button({
 }) {
   let sizeClass = size && `btn-${size}`;
   let variantClass = variant && `btn-${variant}`;
-  let colorClass = color && `btn-${color}-${variant}`
-  const allClasses = classnames(sizeClass, variantClass, colorClass, className,"select-none");
-
+  let colorClass = color && `btn-${color}-${variant}`;
+  const allClasses = classnames(
+    sizeClass,
+    variantClass,
+    colorClass,
+    className,
+    "select-none"
+  );
 
   return (
-    <button className={allClasses} {...rest} disabled={isDisabled} onClick={runOnClick} href={href}>
+    <button
+      className={allClasses}
+      {...rest}
+      disabled={isDisabled}
+      onClick={runOnClick}
+      href={href}
+    >
       {children}
     </button>
   );

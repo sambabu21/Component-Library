@@ -4,7 +4,7 @@ import Header from "../Components/Header"
 
 export default function MainLayout(){
     return (
-        <div className="min-h-screen grid grid-rows-[64px_auto_64px]">
+        <div className="min-h-screen flex flex-col ">
             <Header />
             <Outlet />
             <Footer />

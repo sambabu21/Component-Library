@@ -4,6 +4,7 @@ import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Loader from "./Loader";
+import Subtext from "../../Common Components/DisplaySection/Subtext";
 
 export default function LoaderSection() {
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function LoaderSection() {
       sectionDescription="Loaders inform the user of a loading or computing processes being carried out by the system. "
     >
       <Subheading>Default loader</Subheading>
+      <Subtext>Default circle shaped loader.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -22,14 +24,15 @@ export default function LoaderSection() {
                 <Loader />
             </div>
           }
-          code={`
-<div>  
+          code={
+`<div>  
     <Loader />
 </div>`}
         />
       </SubSection>
 
       <Subheading>Loader types</Subheading>
+      <Subtext>Use the <span className="prop">type</span> prop to change the style of loader.</Subtext>
       <SubSection>
         <PreviewCode
           component={
@@ -39,9 +42,11 @@ export default function LoaderSection() {
                 <Loader type="dotspin"/>
             </div>
           }
-          code={`
-<div>  
+          code={
+`<div>  
     <Loader />
+    <Loader type="dots"/>
+    <Loader type="dotspin"/>
 </div>`}
         />
       </SubSection>

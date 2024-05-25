@@ -12,9 +12,9 @@ export default function PreviewCode({ component, code, onClick }) {
 
   return (
     <div className="w-full">
-      <div className="h-12 w-[300px] sm:w-full mx-auto flex sm:mb-8 border-b border-[#484848] text-[#B4B4B4]">
+      <div className="h-12 w-full mx-auto flex sm:mb-8 border-b border-[#484848] text-[#B4B4B4]">
         <div
-          className={`w-[150px] sm:w-[120px] flex justify-center items-center gap-1 hover:cursor-pointer hover:border-b-2 hover:text-[#EEEEEE] ${
+          className={`w-1/2 sm:w-[120px] flex justify-center items-center gap-1 hover:cursor-pointer hover:border-b-2 hover:text-[#EEEEEE] ${
             view === "preview"
               ? "border-b-2 border-[#6E56CF] text-[#6E56CF] bg-[#191919]"
               : ""
@@ -26,7 +26,7 @@ export default function PreviewCode({ component, code, onClick }) {
           <h1>Preview</h1>
         </div>
         <div
-          className={`w-[150px] sm:w-[120px] flex justify-center items-center gap-1 hover:cursor-pointer hover:border-b-2 hover:text-[#EEEEEE] ${
+          className={`w-1/2 sm:w-[120px] flex justify-center items-center gap-1 hover:cursor-pointer hover:border-b-2 hover:text-[#EEEEEE] ${
             view === "code"
               ? "border-b-2 border-[#6E56CF] text-[#6E56CF] bg-[#191919]"
               : ""
@@ -39,7 +39,7 @@ export default function PreviewCode({ component, code, onClick }) {
         </div>
       </div>
       {view === "preview" && (
-        <div className="w-[300px] sm:min-w-full min-h-[250px] border border-[#484848] rounded-b-xl sm:rounded-xl flex justify-center items-center sm:gap-20 py-10 px-10 mx-auto">
+        <div className="min-w-full min-h-[250px] border-b sm:border border-[#484848]  sm:border-[#484848]  sm:rounded-xl flex justify-center items-center sm:gap-20 py-10 px-10 mx-auto">
           {component}
         </div>
       )}
@@ -47,7 +47,7 @@ export default function PreviewCode({ component, code, onClick }) {
         // <Highlight className="javascript rounded-xl max-h-[400px] pb-10 w-full border border-[#484848] overflow-auto">
         //   {code}
         // </Highlight>
-        <div className="plex text-[14px] w-[300px] mx-auto sm:w-full">
+        <div className="plex text-[14px] mx-auto w-full">
           <CopyBlock
             text={code}
             language={"jsx"}

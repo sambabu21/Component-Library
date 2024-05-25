@@ -11,7 +11,7 @@ export default function Header() {
   }
 
   return (
-    <div className="row-span-1 border-b border-[#2A2A2A] ">
+    <div className="row-span-1 border-b border-[#2A2A2A] sticky top-0 bg-[#111111] z-40">
       <div className=" h-16 max-w-[968px] flex justify-between items-center mx-auto px-5">
         <div className="flex justify-center items-center gap-5">
         {navOpen ? <IoClose className="text-[#6E56CF] w-8 h-8 md:hidden" onClick={toggleNav}/> : <HiOutlineMenu className="text-[#6E56CF] w-8 h-8 md:hidden" onClick={toggleNav}/>}

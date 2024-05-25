@@ -16,12 +16,28 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.sidebar::-webkit-scrollbar{
+  width:10px;
+}
+
+.sidebar::-webkit-scrollbar-track{
+  background:#191919 ;
+  border-radius: 100vw;
+  margin-block: .5rem;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  background: #313131;
+  border-radius: 100vw;
+  border:3px solid #191919;
+}
+
 ::selection{
   background-color: #6E56CF;
 }
 
 .plex{
-font-family: "IBM Plex Mono";
+font-family: "JetBrains Mono";
 }
 
 .glass{
@@ -36,6 +52,14 @@ font-family: "IBM Plex Mono";
 .grid-center{
   display: grid;
   grid-template-columns: auto  auto;
+}
+
+.prop{
+  background: #3A3A3A;
+  padding: 2.4px 4.8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: "JetBrains Mono";
 }
 
 .jost{
