@@ -59,6 +59,18 @@ export default function Components() {
               </div>
             </div>
           </ComponentContainer>
+          <ComponentContainer title="Modals">
+            <div className="w-[150px] h-[100px] rounded-lg bg-[#e2ddfe34] flex flex-col justify-center items-start gap-2 px-4 relative">
+              <span className="text-[#111111] absolute top-2 right-4 font-semibold">X</span>
+            <span className="w-[60px] h-[4px] bg-[#BAA7FF] rounded-full mb-2"></span>
+                <span className="h-[4px] w-[100px] bg-[#111111] rounded-full"></span>
+                <span className="h-[4px] w-[100px] bg-[#111111] rounded-full"></span>
+                <div className="flex justify-center items-center gap-2 mt-3">
+                  <span className="w-[30px] h-[12px] bg-[#BAA7FF] rounded-sm"></span>
+                  <span className="w-[30px] h-[12px] bg-[#e2ddfe34] rounded-sm"></span>
+                </div>
+            </div>
+          </ComponentContainer>
           <ComponentContainer title="Toggles">
             <div className="w-[50px] h-[20px] rounded-full bg-[#e2ddfe34] flex justify-end items-center">
               <span className="w-[30px] h-[30px] bg-[#BAA7FF] rounded-full"></span>

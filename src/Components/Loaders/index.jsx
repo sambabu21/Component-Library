@@ -5,11 +5,19 @@ import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Loader from "./Loader";
 import Subtext from "../../Common Components/DisplaySection/Subtext";
+import Proptable from "../../Common Components/DisplaySection/Proptable";
 
 export default function LoaderSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const propstable = [{
+    name:"type",
+    value : [`"dots"`,`"dotspin"`],
+    default : "medium"
+  }]
+
   return (
     <DisplaySection
       sectionTitle="Loaders"
@@ -50,7 +58,7 @@ export default function LoaderSection() {
 </div>`}
         />
       </SubSection>
-     
+     <Proptable propstable={propstable}/>
     </DisplaySection>
   )
 }

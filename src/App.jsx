@@ -17,6 +17,7 @@ import AlertSection from "./Components/Alerts/Index";
 import { createContext, useState } from "react";
 import ToggleSection from "./Components/Toggles/Index";
 import LoaderSection from "./Components/Loaders";
+import ModalSection from "./Components/Modal/Index";
 
 const NavContext = createContext();
 export { NavContext };
@@ -42,6 +43,7 @@ function App() {
               <Route path="/components/cards" element={<CardSection />} />
               <Route path="/components/toggles" element={<ToggleSection />} />
               <Route path="/components/loaders" element={<LoaderSection />} />
+              <Route path="/components/modals" element={<ModalSection />} />
               <Route
                 path="/components/testimonials"
                 element={<TestimonialsSection />}

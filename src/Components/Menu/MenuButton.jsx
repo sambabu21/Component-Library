@@ -3,7 +3,6 @@ import { MenuContext } from "./Menu";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GoKebabHorizontal } from "react-icons/go";
-import { IoPersonSharp } from "react-icons/io5";
 import Avatar from "../Avatar/Avatar";
 
 

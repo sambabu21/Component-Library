@@ -5,11 +5,31 @@ import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Subtext from "../../Common Components/DisplaySection/Subtext";
+import Proptable from "../../Common Components/DisplaySection/Proptable";
 
 export default function ButtonSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const propstable = [{
+    name:"variant",
+    value : [`"outline"`,`"text"`],
+    default : "filled"
+  },{
+    name:"isDisabled",
+    value: ["Boolean"],
+    default:"false"
+  },{
+    name:"color",
+    value: [`"red"`,`"blue"`,`"yellow"`,`"green"`],
+    default:"/"
+  },{
+    name:"size",
+    value: [`"small"`,`"large"`],
+    default:"/"
+  }]
+
   return (
     <DisplaySection
       sectionTitle="Buttons"
@@ -206,6 +226,7 @@ export default function ButtonSection() {
 </div>`}
         />
       </SubSection>
+      <Proptable propstable={propstable}/>
     </DisplaySection>
   );
 }

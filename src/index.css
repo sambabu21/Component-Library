@@ -56,14 +56,18 @@ font-family: "JetBrains Mono";
 
 .prop{
   background: #3A3A3A;
-  padding: 2.4px 4.8px;
   border-radius: 4px;
+  padding: 0px 4px;
   font-size: 12px;
   font-family: "JetBrains Mono";
 }
 
 .jost{
   font-family: Jost;
+}
+
+.tablerow:not(:last-child){
+  border-bottom: 1px solid #484848;
 }
 
 .gradient-text{

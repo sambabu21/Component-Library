@@ -20,6 +20,7 @@ export default function Sidebar() {
         <LinkItem>buttons</LinkItem>
         <LinkItem>loaders</LinkItem>
         <LinkItem>menu</LinkItem>
+        <LinkItem>modals</LinkItem>
         <LinkItem>toggles</LinkItem>
         <LinkItem>tooltips</LinkItem>
 
@@ -38,12 +39,12 @@ export default function Sidebar() {
       </div>
       {navOpen ? (
         <div className="">
-          <div className="w-screen h-screen absolute top-0 bg-[#111111a9]"></div>
-          <div className="min-h-full w-[250px] flex md:hidden flex-col items-start pt-5 absolute left-0 top-0 bg-[#111111] border-r border-[#191919] z-30">
-            <div className="flex justify-center items-center gap-2">
+          <div className="w-screen h-full absolute top-0 bg-[#111111a9] z-30"></div>
+          <div className="min-h-full w-[250px] flex md:hidden flex-col items-start pt-5 absolute  inset-y-0 left-0 bg-[#111111] border-r border-[#191919] z-30 overflow-scroll">
+            {/* <div className="flex justify-center items-center gap-2">
             <IoClose className="text-[#6E56CF] w-7 h-7 " onClick={toggleNav}/>
             <h1 className="text-white font-bold text-[18px]">DUI</h1>
-            </div>
+            </div> */}
             
             <h1 className="text-[#6E56CF] font-semibold text-sm h-16 w-full flex justify-start items-center pl-3 ">
               GENERAL
@@ -53,6 +54,7 @@ export default function Sidebar() {
             <LinkItem toggleNav={toggleNav}>buttons</LinkItem>
             <LinkItem toggleNav={toggleNav}>loaders</LinkItem>
             <LinkItem toggleNav={toggleNav}>menu</LinkItem>
+            <LinkItem toggleNav={toggleNav}>modals</LinkItem>
             <LinkItem toggleNav={toggleNav}>toggles</LinkItem>
             <LinkItem toggleNav={toggleNav}>tooltips</LinkItem>
 

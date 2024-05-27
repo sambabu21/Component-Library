@@ -6,11 +6,22 @@ import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Subtext from "../../Common Components/DisplaySection/Subtext";
+import Proptable from "../../Common Components/DisplaySection/Proptable";
 
 export default function AvatarSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const propstable = [{
+    name:"size",
+    value : [`"small"`,`"large"`],
+    default : "medium"
+  },{
+    name:"src",
+    value: ["url of the image"],
+    default:"/"
+  }]
   return (
     <DisplaySection
       sectionTitle="Avatars"
@@ -71,6 +82,7 @@ export default function AvatarSection() {
 </div>`}
         />
       </SubSection>
+      <Proptable propstable={propstable}/>
     </DisplaySection>
   );
 }

@@ -7,11 +7,34 @@ import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Subtext from "../../Common Components/DisplaySection/Subtext";
+import Proptable from "../../Common Components/DisplaySection/Proptable";
 
 export default function BadgesSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const propstable = [{
+    name:"size",
+    value : [`"small"`,`"large"`],
+    default : "medium"
+  },{
+    name:"shape",
+    value: [`"square"`,`"pill"`],
+    default:"square"
+  },{
+    name:"color",
+    value: [`"red"`,`"blue"`,`"yellow"`,`"green"`],
+    default:"/"
+  },{
+    name:"startIcon",
+    value: ["ReactNode"],
+    default:"/"
+  },{
+    name:"stopIcon",
+    value: ["ReactNode"],
+    default:"/"
+  }]
   return (
     <DisplaySection
       sectionTitle="Badges"
@@ -112,6 +135,7 @@ export default function BadgesSection() {
 </div>`}
         />
       </SubSection>
+      <Proptable propstable={propstable}/>
     </DisplaySection>
   );
 }

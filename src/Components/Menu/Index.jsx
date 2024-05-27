@@ -17,11 +17,31 @@ import DisplaySection from "../../Common Components/DisplaySection/Index";
 import Subheading from "../../Common Components/DisplaySection/Subheading";
 import SubSection from "../../Common Components/DisplaySection/SubSection";
 import Subtext from "../../Common Components/DisplaySection/Subtext";
+import Proptable from "../../Common Components/DisplaySection/Proptable";
 
 export default function MenuSection() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const propstable = [{
+    name:"icon",
+    value : [`ReactNode`],
+    default : "/"
+  },{
+    name:"title",
+    value: ["String"],
+    default:"/"
+  },{
+    name:"type",
+    value: [`"hamburger"`,`"kebab"`,`"avatar"`],
+    default:"/"
+  },{
+    name:"avatar",
+    value: [`url of avatar image`],
+    default:"/"
+  }] 
+
   return (
     <DisplaySection
       sectionTitle="Menu"
@@ -224,6 +244,7 @@ export default function MenuSection() {
 </div>`}
         />
       </SubSection>
+      <Proptable propstable={propstable}/>
     </DisplaySection>
   );
 }
