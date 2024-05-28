@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import { PiWarningCircleBold } from "react-icons/pi";
 import { PiCheckCircleBold } from "react-icons/pi";
-
+import { motion } from "framer-motion";
 
 export default function Toast({
   children,
@@ -18,7 +18,7 @@ export default function Toast({
     variantClass,
     positionClass,
     className,
-    "w-[300px] rounded-[6px] px-5 py-3 flex gap-2 justify-start items-start drop-shadow-xl toast"
+    "w-[300px] rounded-[6px] px-5 py-3 flex gap-2 justify-start items-start drop-shadow-xl toast z-40"
   );
 
 
@@ -39,7 +39,11 @@ export default function Toast({
 
 
   return (
-    <div className={allClasses} {...rest}>
+    <motion.div 
+      initial={{opacity:0,y:40}}
+      animate={{opacity:1,y:0,transition:{duration:0.2}}}
+      exit={{opacity:0,y:100,transition:{duration:0.2}}}
+    className={allClasses} {...rest}>
       {/* <img src={imgSrc} className="w-4 h-4" /> */}
       <div className="flex justify-center items-center rounded-full border-dashed border-[3px] border-opacity-55 border-[#EEEEEE] p-1">
         {icon}
@@ -48,6 +52,6 @@ export default function Toast({
         <h1 className="font-medium capitalize text-[14px]">{title}</h1>
         <p className="text-[14px]">{children}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
