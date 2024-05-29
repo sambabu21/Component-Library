@@ -15,7 +15,7 @@ export default function Header() {
   console.log(location.pathname);
 
   return (
-    <div className="row-span-1 border-b border-[#2A2A2A] sticky top-0 bg-[#111111] z-40">
+    <header className="row-span-1 border-b border-[#2A2A2A] sticky top-0 bg-[#111111] z-40">
       <div className=" h-16 max-w-[968px] flex justify-between items-center mx-auto px-5">
         <div className="flex justify-center items-center gap-5">
           {location.pathname !== "/" ? (
@@ -43,10 +43,11 @@ export default function Header() {
         <Link
           to="/components"
           className="text-[#EEEEEE] flex justify-center items-center font-semibold rounded-full text-[14px] sm:text-[16px] px-[12px] sm:px-[16px] border border-[#6E56CF] h-[36px] hover:shadow-[0px_0px_10px_7px_#291F43]"
+          aria-label="Navigate to the components page"
         >
           Components
         </Link>
       </div>
-    </div>
+    </header>
   );
 }

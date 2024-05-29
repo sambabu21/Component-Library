@@ -7,7 +7,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="py-40 w-full h-[calc(100vh-128px)] flex flex-col justify-center items-center bg-[#191919]">
+    <div className="py-40 w-full h-[calc(100vh-128px)] flex flex-col justify-center items-center bg-[#191919]" aria-label="Defix UI home page">
       <div className="w-full md:w-[968px] flex flex-col justify-center items-start gap-10 sm:gap-20 md:pr-28 p-10 md:p-0">
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
@@ -35,6 +35,7 @@ export default function Home() {
           <Link
             to="/components"
             className="w-[200px] sm:w-[250px] h-[50px] flex justify-center items-center text-white font-semibold hover:shadow-[0px_0px_10px_7px_#291F43] text-[14px] sm:text-[16px] border border-[#6E56CF] rounded-full"
+            aria-label="Navigate to the components page"
           >
             Explore components →
           </Link>

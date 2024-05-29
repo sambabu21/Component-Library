@@ -19,7 +19,7 @@ export default function Button({
     variantClass,
     colorClass,
     className,
-    "select-none"
+    "select-none button"
   );
 
   return (

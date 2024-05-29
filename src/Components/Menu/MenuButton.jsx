@@ -11,33 +11,33 @@ export default function MenuButton({ children,icon,type,avatar }) {
 
   if(type === "hamburger"){
     return (
-      <div onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#EEEEEE] px-5 py-2 rounded-[8px]  flex justify-center items-center gap-2 hover:cursor-pointer">
+      <button onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#EEEEEE] px-5 py-2 rounded-[8px]  flex justify-center items-center gap-2 hover:cursor-pointer">
       <GiHamburgerMenu />
-    </div>
+    </button>
     )
   }else if(type === "kebab"){
     return (
-      <div onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#EEEEEE] px-5 py-2 rounded-[8px]  flex justify-center items-center gap-2 hover:cursor-pointer">
+      <button onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#EEEEEE] px-5 py-2 rounded-[8px]  flex justify-center items-center gap-2 hover:cursor-pointer">
       <GoKebabHorizontal className="rotate-90"/>
-    </div>
+    </button>
     )
   }else if(type === "avatar"){
     return(
-      <div onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#222222] p-2 rounded-full  flex justify-center items-center gap-2 hover:cursor-pointer">
+      <button onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#222222] p-2 rounded-full  flex justify-center items-center gap-2 hover:cursor-pointer">
       {
         avatar ? <Avatar src={avatar} size="small"/> : <Avatar size="small"/>
       }
-    </div>
+    </button>
     )
   }
 
   return (
-    <div onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#EEEEEE] px-5 py-2 rounded-[8px]  flex justify-center items-center gap-2 hover:cursor-pointer">
+    <button onClick={toggleOpen} className="bg-[#222222] hover:bg-[#313131] text-[#EEEEEE] px-5 py-2 rounded-[8px]  flex justify-center items-center gap-2 hover:cursor-pointer">
       <div className="flex">
         { icon ? icon: null}
         {children} 
       </div>
       {<RiArrowDownSLine className={type?"hidden":"w-4 h-4"}/>}
-    </div>
+    </button    >
   );
 }

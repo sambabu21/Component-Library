@@ -90,18 +90,18 @@ font-family: "JetBrains Mono";
   height: 90px;
 }
 
-button{
+.button{
   background-color: #EEEEEE;
   color: #222222;
   font-weight: 600;
   padding: 10px 16px;
   border-radius: 8px;
 }
-button:hover{
+.button:hover{
   background-color: #B4B4B4;
 }
 
-button:disabled{
+.button:disabled{
   cursor: auto;
   background-color: #222222;
   color: #484848;

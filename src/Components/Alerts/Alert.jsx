@@ -35,7 +35,7 @@ export default function Alert({
   }
 
   return (
-    <div className={allClasses} {...rest}>
+    <div className={allClasses} {...rest} role="alert">
      {iconRequired ? <div className={`flex justify-center items-center rounded-full border-dashed border-[3px] border-opacity-55 ${color} p-1`}>
         {icon}
       </div> : null}
