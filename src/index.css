@@ -71,7 +71,7 @@ font-family: "JetBrains Mono";
 }
 
 .gradient-text{
-  background-image: linear-gradient(to bottom right, #22c1c3, #fdbb2d);
+  background-image: linear-gradient(to bottom , #EEEEEE, #B4B4B4);
   -webkit-background-clip: text;
   color: transparent;
 }
